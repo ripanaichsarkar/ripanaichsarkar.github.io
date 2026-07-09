@@ -17,7 +17,7 @@
 }
 
 body{
-    font-family:Segoe UI, Arial, sans-serif;
+    font-family:Segoe UI,Arial,sans-serif;
     background:#f5f5f5;
     color:#333;
 }
@@ -30,46 +30,34 @@ header{
 }
 
 header h1{
-    font-size:42px;
+    font-size:46px;
     margin-bottom:10px;
 }
 
 header p{
-    font-size:18px;
+    font-size:20px;
 }
 
 .buttons{
-    margin-top:25px;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 25px;
+    padding:14px 28px;
     margin:8px;
     background:white;
     color:#2F3C7E;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:8px;
     font-weight:bold;
-    transition:.25s;
+    transition:.3s;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
 }
 
 .btn:hover{
     background:#FBEAEB;
-}
-
-.contact-info{
-    margin-top:20px;
-    font-size:18px;
-}
-
-.contact-info a{
-    color:white;
-    text-decoration:none;
-}
-
-.contact-info a:hover{
-    text-decoration:underline;
+    transform:translateY(-2px);
 }
 
 .container{
@@ -96,7 +84,7 @@ header p{
     display:block;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.25s;
+    transition:.3s;
 }
 
 .gallery img:hover{
@@ -115,6 +103,71 @@ iframe{
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
+/* CONTACT MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.modal-content{
+    background:#fff;
+    width:340px;
+    max-width:90%;
+    margin:10% auto;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    position:relative;
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:12px;
+    font-size:30px;
+    cursor:pointer;
+    color:#555;
+}
+
+.close:hover{
+    color:red;
+}
+
+.contact-btn{
+    display:block;
+    margin:18px 0;
+    padding:15px;
+    text-decoration:none;
+    background:#2F3C7E;
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.contact-btn:hover{
+    background:#4456b5;
+}
+
 footer{
     background:#2F3C7E;
     color:white;
@@ -123,14 +176,18 @@ footer{
     margin-top:60px;
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
 
 .gallery{
     grid-template-columns:1fr;
 }
 
 header h1{
-    font-size:32px;
+    font-size:34px;
+}
+
+header p{
+    font-size:17px;
 }
 
 .section-title{
@@ -161,29 +218,35 @@ iframe{
 📄 Download Resume
 </a>
 
-<a class="btn" href="mailto:ripanxyz@gmail.com">
+<a class="btn" href="#" onclick="openContact(); return false;">
 ✉ Contact Me
 </a>
 
 </div>
 
-<div class="contact-info">
+</header>
 
-📧
-<a href="mailto:ripanxyz@gmail.com">
-ripanxyz@gmail.com
+<!-- Contact Popup -->
+
+<div id="contactModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeContact()">&times;</span>
+
+<h2 style="margin-bottom:25px;">Contact Me</h2>
+
+<a class="contact-btn" href="mailto:ripanxyz@gmail.com">
+📧 Email Me
 </a>
 
-&nbsp;&nbsp;|&nbsp;&nbsp;
-
-📱
-<a href="tel:+917003584376">
-+91 7003584376
+<a class="contact-btn" href="tel:+917003584376">
+📱 Call Me
 </a>
 
 </div>
 
-</header>
+</div>
 
 <div class="container">
 
@@ -194,35 +257,35 @@ Power BI Dashboard Portfolio
 <div class="gallery">
 
 <a href="Dashboard 1.png" target="_blank">
-<img src="Dashboard 1.png" alt="Dashboard 1" loading="lazy">
+<img src="Dashboard 1.png" alt="Dashboard 1">
 </a>
 
 <a href="Dashboard 2.png" target="_blank">
-<img src="Dashboard 2.png" alt="Dashboard 2" loading="lazy">
+<img src="Dashboard 2.png" alt="Dashboard 2">
 </a>
 
 <a href="Dashboard 3.png" target="_blank">
-<img src="Dashboard 3.png" alt="Dashboard 3" loading="lazy">
+<img src="Dashboard 3.png" alt="Dashboard 3">
 </a>
 
 <a href="Dashboard 4.png" target="_blank">
-<img src="Dashboard 4.png" alt="Dashboard 4" loading="lazy">
+<img src="Dashboard 4.png" alt="Dashboard 4">
 </a>
 
 <a href="Dashboard 5.png" target="_blank">
-<img src="Dashboard 5.png" alt="Dashboard 5" loading="lazy">
+<img src="Dashboard 5.png" alt="Dashboard 5">
 </a>
 
 <a href="Dashboard 6.png" target="_blank">
-<img src="Dashboard 6.png" alt="Dashboard 6" loading="lazy">
+<img src="Dashboard 6.png" alt="Dashboard 6">
 </a>
 
 <a href="Dashboard 7.png" target="_blank">
-<img src="Dashboard 7.png" alt="Dashboard 7" loading="lazy">
+<img src="Dashboard 7.png" alt="Dashboard 7">
 </a>
 
 <a href="Dashboard 8.png" target="_blank">
-<img src="Dashboard 8.png" alt="Dashboard 8" loading="lazy">
+<img src="Dashboard 8.png" alt="Dashboard 8">
 </a>
 
 </div>
@@ -244,6 +307,28 @@ Resume
 © 2026 Ripan Aich Sarkar
 
 </footer>
+
+<script>
+
+function openContact(){
+    document.getElementById("contactModal").style.display="block";
+}
+
+function closeContact(){
+    document.getElementById("contactModal").style.display="none";
+}
+
+window.onclick=function(event){
+
+const modal=document.getElementById("contactModal");
+
+if(event.target===modal){
+modal.style.display="none";
+}
+
+}
+
+</script>
 
 </body>
 
