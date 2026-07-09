@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,7 +24,7 @@ body{
 
 header{
     background:#2F3C7E;
-    color:#fff;
+    color:white;
     text-align:center;
     padding:60px 20px;
 }
@@ -43,9 +44,9 @@ header p{
 
 .btn{
     display:inline-block;
-    padding:12px 24px;
+    padding:12px 25px;
     margin:8px;
-    background:#fff;
+    background:white;
     color:#2F3C7E;
     text-decoration:none;
     border-radius:6px;
@@ -57,10 +58,31 @@ header p{
     background:#FBEAEB;
 }
 
+.contact-info{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.contact-info a{
+    color:white;
+    text-decoration:none;
+}
+
+.contact-info a:hover{
+    text-decoration:underline;
+}
+
 .container{
     max-width:1400px;
     margin:auto;
     padding:40px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    color:#2F3C7E;
+    margin-bottom:30px;
 }
 
 .gallery{
@@ -69,12 +91,9 @@ header p{
     gap:25px;
 }
 
-.gallery a{
-    display:block;
-}
-
 .gallery img{
     width:100%;
+    display:block;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
     transition:.25s;
@@ -85,7 +104,7 @@ header p{
 }
 
 .resume{
-    margin-top:60px;
+    margin-top:70px;
 }
 
 iframe{
@@ -101,7 +120,27 @@ footer{
     color:white;
     text-align:center;
     padding:20px;
-    margin-top:50px;
+    margin-top:60px;
+}
+
+@media(max-width:600px){
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+header h1{
+    font-size:32px;
+}
+
+.section-title{
+    font-size:26px;
+}
+
+iframe{
+    height:700px;
+}
+
 }
 
 </style>
@@ -128,9 +167,29 @@ footer{
 
 </div>
 
+<div class="contact-info">
+
+📧
+<a href="mailto:ripanxyz@gmail.com">
+ripanxyz@gmail.com
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+📱
+<a href="tel:+917003584376">
++91 7003584376
+</a>
+
+</div>
+
 </header>
 
 <div class="container">
+
+<h2 class="section-title">
+Power BI Dashboard Portfolio
+</h2>
 
 <div class="gallery">
 
@@ -170,6 +229,10 @@ footer{
 
 <div class="resume">
 
+<h2 class="section-title">
+Resume
+</h2>
+
 <iframe src="cv.pdf" title="Resume"></iframe>
 
 </div>
@@ -183,4 +246,5 @@ footer{
 </footer>
 
 </body>
+
 </html>
