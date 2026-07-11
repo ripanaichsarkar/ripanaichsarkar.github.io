@@ -1,1 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ripan Aich Sarkar • Business Intelligence Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ==========================================================
+   RIPAN AICH SARKAR PORTFOLIO
+   VERSION 2.0
+========================================================== */
+
+:root{
+
+--bg:#080C16;
+--bg2:#111827;
+--card:#121B2C;
+--primary:#2F3C7E;
+--primary-light:#4F6EF7;
+--text:#F8FAFC;
+--text2:#CBD5E1;
+--border:rgba(255,255,255,.08);
+
+--shadow:0 15px 45px rgba(0,0,0,.35);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+html{
+
+overflow-x:hidden;
+
+}
+
+body{
+
+background:var(--bg);
+
+color:var(--text);
+
+font-family:'Inter',sans-serif;
+
+overflow-x:hidden;
+
+line-height:1.6;
+
+}
+
+img{
+
+display:block;
+max-width:100%;
+
+}
+
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
+button{
+
+font-family:inherit;
+
+}
+
+
+/* ==========================================================
+NAVBAR
+========================================================== */
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+right:0;
+
+height:78px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 8%;
+
+background:rgba(8,12,22,.65);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.04);
+
+z-index:9999;
+
+transition:.35s;
+
+}
+
+.logo{
+
+font-size:26px;
+
+font-weight:800;
+
+letter-spacing:2px;
+
+color:white;
+
+}
+
+nav ul{
+
+display:flex;
+
+align-items:center;
+
+gap:38px;
+
+list-style:none;
+
+}
+
+nav ul a{
+
+font-size:15px;
+
+font-weight:500;
+
+color:var(--text2);
+
+transition:.3s;
+
+}
+
+nav ul a:hover{
+
+color:white;
+
+}
+
+nav button{
+
+background:var(--primary);
+
+border:none;
+
+color:white;
+
+padding:11px 24px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav button:hover{
+
+background:var(--primary-light);
+
+transform:translateY(-2px);
+
+}
+
+.mobile-menu{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+/* ==========================================================
+HERO
+========================================================== */
+
+#hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:140px 8% 90px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* Animated Grid */
+
+.background-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+background-size:65px 65px;
+
+mask-image:linear-gradient(to bottom,black,transparent);
+
+opacity:.5;
+
+}
+
+
+/* Glow */
+
+.hero-glow{
+
+position:absolute;
+
+width:650px;
+
+height:650px;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.35;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+.glow1{
+
+background:#2F3C7E;
+
+top:-200px;
+
+left:-120px;
+
+}
+
+.glow2{
+
+background:#4F6EF7;
+
+bottom:-250px;
+
+right:-120px;
+
+animation-delay:3s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(35px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.hero-content{
+
+max-width:930px;
+
+text-align:center;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.welcome{
+
+font-size:19px;
+
+font-weight:500;
+
+color:#8FB2FF;
+
+margin-bottom:18px;
+
+}
+
+.hero h1{
+
+font-size:78px;
+
+font-weight:900;
+
+line-height:1.05;
+
+margin-bottom:18px;
+
+background:linear-gradient(
+
+90deg,
+
+white,
+
+#8FB2FF
+
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+color:white;
+
+}
+
+.specialization{
+
+font-size:17px;
+
+letter-spacing:1px;
+
+color:#9FB4FF;
+
+margin-bottom:28px;
+
+}
+
+.status{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 22px;
+
+border-radius:40px;
+
+background:rgba(47,60,126,.22);
+
+border:1px solid rgba(79,110,247,.4);
+
+margin-bottom:35px;
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+.bio{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:var(--text2);
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+margin-top:50px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+}
+
+
+/* ==========================================================
+BUTTONS
+========================================================== */
+
+.hero-buttons a,
+
+.hero-buttons button{
+
+padding:16px 32px;
+
+border-radius:14px;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.hero-buttons a:first-child{
+
+background:var(--primary);
+
+color:white;
+
+box-shadow:0 15px 40px rgba(47,60,126,.35);
+
+}
+
+.hero-buttons a:first-child:hover{
+
+background:var(--primary-light);
+
+transform:translateY(-4px);
+
+}
+
+.hero-buttons a:nth-child(2){
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.1);
+
+color:white;
+
+backdrop-filter:blur(10px);
+
+}
+
+.hero-buttons a:nth-child(2):hover{
+
+background:rgba(255,255,255,.08);
+
+transform:translateY(-4px);
+
+}
+
+.hero-buttons button{
+
+background:white;
+
+color:#111827;
+
+border:none;
+
+}
+
+.hero-buttons button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:var(--shadow);
+
+}
+
+
+/* ==========================================================
+SCROLL INDICATOR
+========================================================== */
+
+.scroll-indicator{
+
+margin-top:75px;
+
+font-size:15px;
+
+color:var(--text2);
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+}
+
+}
+
+
+/* ==========================================================
+COMMON SECTIONS
+========================================================== */
+
+section{
+
+padding:110px 8%;
+
+}
+
+.section-title{
+
+max-width:900px;
+
+margin:0 auto 70px;
+
+text-align:center;
+
+}
+
+.section-title h2{
+
+font-size:46px;
+
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+font-size:18px;
+
+color:var(--text2);
+
+line-height:1.8;
+
+}
+/* ==========================================================
+CORE EXPERTISE
+========================================================== */
+
+.skills-grid{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.skills-grid span{
+
+padding:15px 24px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid var(--border);
+
+border-radius:50px;
+
+font-size:15px;
+
+font-weight:600;
+
+color:var(--text);
+
+backdrop-filter:blur(15px);
+
+transition:.35s;
+
+cursor:default;
+
+}
+
+.skills-grid span:hover{
+
+transform:translateY(-6px);
+
+background:var(--primary);
+
+box-shadow:0 15px 35px rgba(47,60,126,.35);
+
+}
+
+
+/* ==========================================================
+ENTERPRISE CLIENTS
+========================================================== */
+
+.client-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:28px;
+
+margin-top:60px;
+
+}
+
+.client-card{
+
+height:170px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+backdrop-filter:blur(15px);
+
+transition:.35s;
+
+overflow:hidden;
+
+}
+
+.client-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+border-color:rgba(79,110,247,.45);
+
+}
+
+.client-card img{
+
+max-width:160px;
+
+max-height:70px;
+
+opacity:.8;
+
+filter:grayscale(100%) brightness(1.8);
+
+transition:.35s;
+
+}
+
+.client-card:hover img{
+
+opacity:1;
+
+filter:grayscale(0%) brightness(1);
+
+transform:scale(1.06);
+
+}
+
+
+/* ==========================================================
+PORTFOLIO
+========================================================== */
+
+.gallery{
+
+column-count:2;
+
+column-gap:28px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+margin-bottom:28px;
+
+border-radius:18px;
+
+cursor:pointer;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+break-inside:avoid;
+
+}
+
+.gallery img:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.45),
+
+0 0 25px rgba(79,110,247,.20);
+
+}
+
+
+/* ==========================================================
+RESUME
+========================================================== */
+
+.resume-button{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:35px;
+
+}
+
+.resume-button a{
+
+display:inline-block;
+
+padding:15px 32px;
+
+background:var(--primary);
+
+border-radius:14px;
+
+font-weight:600;
+
+transition:.35s;
+
+color:white;
+
+}
+
+.resume-button a:hover{
+
+background:var(--primary-light);
+
+transform:translateY(-3px);
+
+}
+
+.resume-frame{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:14px;
+
+backdrop-filter:blur(15px);
+
+}
+
+.resume-frame iframe{
+
+width:100%;
+
+height:1050px;
+
+border:none;
+
+border-radius:14px;
+
+background:white;
+
+}
+
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+footer{
+
+margin-top:120px;
+
+padding:80px 20px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+background:#060A12;
+
+}
+
+footer h3{
+
+font-size:28px;
+
+margin-bottom:12px;
+
+}
+
+footer p{
+
+color:var(--text2);
+
+margin-top:8px;
+
+font-size:16px;
+
+}
+
+
+/* ==========================================================
+SECTION DIVIDER
+========================================================== */
+
+#skills,
+#clients,
+#portfolio,
+#resume{
+
+position:relative;
+
+}
+
+#skills::before,
+#clients::before,
+#portfolio::before,
+#resume::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:140px;
+
+height:2px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--primary-light),
+
+transparent
+
+);
+
+opacity:.65;
+
+}
+/* ==========================================================
+CONTACT MODAL
+========================================================== */
+
+<div id="contactModal">
+
+<div class="contact-box">
+
+<span class="close-contact" onclick="closeContact()">&times;</span>
+
+<h2>Let's Connect</h2>
+
+<p>
+I'd love to discuss Business Intelligence,
+Power BI, Automation, Reporting, or new opportunities.
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:ripanxyz@gmail.com">
+📧 Email Me
+</a>
+
+<a href="tel:+917003584376">
+📱 Call Me
+</a>
+
+<a href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/" target="_blank">
+💼 LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+/* ==========================================================
+LIGHTBOX
+========================================================== */
+
+<div id="lightbox">
+
+<span class="lightbox-close">&times;</span>
+
+<button class="lightbox-prev">&#10094;</button>
+
+<img id="lightbox-image">
+
+<button class="lightbox-next">&#10095;</button>
+
+</div>
+/* ==========================================================
+SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:11px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0A101B;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#2F3C7E;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#4F6EF7;
+
+}
+
+
+/* ==========================================================
+TEXT SELECTION
+========================================================== */
+
+::selection{
+
+background:#4F6EF7;
+
+color:white;
+
+}
+
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.client-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery{
+
+column-count:1;
+
+}
+
+.resume-frame iframe{
+
+height:850px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+padding:0 25px;
+
+height:72px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.mobile-menu{
+
+display:block;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.bio{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.specialization{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero-buttons a,
+
+.hero-buttons button{
+
+width:100%;
+
+max-width:320px;
+
+text-align:center;
+
+}
+
+.skills-grid{
+
+gap:14px;
+
+}
+
+.skills-grid span{
+
+font-size:14px;
+
+padding:13px 18px;
+
+}
+
+.client-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.section-title p{
+
+font-size:16px;
+
+}
+
+.resume-frame iframe{
+
+height:650px;
+
+}
+
+footer{
+
+padding:60px 25px;
+
+}
+
+.lightbox-prev,
+
+.lightbox-next{
+
+display:none;
+
+}
+
+#lightbox img{
+
+max-width:100%;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<a href="#hero" class="logo">
+Ripan.
+</a>
+
+<ul>
+
+<li><a href="#portfolio">Portfolio</a></li>
+
+<li><a href="#resume">Resume</a></li>
+
+<li>
+<button onclick="openContact()">
+Contact
+</button>
+</li>
+
+</ul>
+
+<div class="mobile-menu">
+
+☰
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- ================= HERO ================= -->
+
+<section id="hero">
+
+<div class="background-grid"></div>
+
+<div class="hero-glow glow1"></div>
+
+<div class="hero-glow glow2"></div>
+
+<div class="hero-content">
+
+<p class="welcome">
+
+👋 Hello, I'm
+
+</p>
+
+<h1>
+
+Ripan Aich Sarkar
+
+</h1>
+
+<h2>
+
+Business Intelligence Developer
+
+</h2>
+
+<p class="specialization">
+
+Power BI • SQL • DAX • Enterprise Reporting • Automation
+
+</p>
+
+<div class="status">
+
+🟢 Available for Immediate Joining
+
+</div>
+
+<p class="bio">
+
+Software Engineer & Data Analyst with
+<strong>4+ years of experience</strong>
+in Business Intelligence, Power BI, SQL,
+DAX, process automation, and enterprise reporting.
+
+Skilled in developing interactive dashboards,
+workflow automation solutions,
+and data-driven applications using Microsoft technologies
+and RPA platforms.
+
+Experienced in reporting,
+application support,
+testing,
+and process optimization across enterprise environments.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="cv.pdf" target="_blank">
+
+📄 Resume
+
+</a>
+
+<a
+href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/"
+target="_blank">
+
+💼 LinkedIn
+
+</a>
+
+<button onclick="openContact()">
+
+✉ Contact
+
+</button>
+
+</div>
+
+<div class="scroll-indicator">
+
+↓
+
+<br>
+
+Scroll to Explore
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<div class="section-title">
+
+<h2>
+
+Core Expertise
+
+</h2>
+
+<p>
+
+Technologies and platforms used across
+Business Intelligence,
+Reporting,
+Automation,
+and Enterprise Solutions.
+
+</p>
+
+</div>
+
+<div class="skills-grid">
+
+<span>Power BI</span>
+
+<span>DAX</span>
+
+<span>SQL Server</span>
+
+<span>Power Query</span>
+
+<span>Dataverse</span>
+
+<span>Power Automate</span>
+
+<span>Blue Prism</span>
+
+<span>ETL</span>
+
+<span>Power Apps</span>
+
+<span>Business Intelligence</span>
+
+<span>Enterprise Reporting</span>
+
+<span>Automation</span>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= CLIENTS ================= -->
+
+<section id="clients">
+
+<div class="section-title">
+
+<h2>
+
+Trusted Across Enterprise Organizations
+
+</h2>
+
+<p>
+
+Delivered Business Intelligence,
+Reporting,
+Process Automation,
+and Application Support solutions
+for enterprise organizations.
+
+</p>
+
+</div>
+
+<div class="client-grid">
+
+<div class="client-card">
+
+<img src="logos/chanel.svg" alt="Chanel">
+
+</div>
+
+<div class="client-card">
+
+<img src="logos/bcbsma.svg" alt="BCBSMA">
+
+</div>
+
+<div class="client-card">
+
+<img src="logos/lifepoint.svg" alt="LifePoint Health">
+
+</div>
+
+<div class="client-card">
+
+<img src="logos/northwestern.svg" alt="Northwestern Medicine">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+<div class="section-title">
+
+<h2>
+
+Selected Dashboard Snapshots
+
+</h2>
+
+<p>
+
+Representative dashboard samples showcasing
+business intelligence,
+enterprise reporting,
+KPI visualization,
+and operational reporting capabilities.
+
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="Dashboard 1.png" alt="Dashboard 1">
+
+<img src="Dashboard 2.png" alt="Dashboard 2">
+
+<img src="Dashboard 3.png" alt="Dashboard 3">
+
+<img src="Dashboard 4.png" alt="Dashboard 4">
+
+<img src="Dashboard 5.png" alt="Dashboard 5">
+
+<img src="Dashboard 6.png" alt="Dashboard 6">
+
+<img src="Dashboard 7.png" alt="Dashboard 7">
+
+<img src="Dashboard 8.png" alt="Dashboard 8">
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= RESUME ================= -->
+
+<section id="resume">
+
+<div class="section-title">
+
+<h2>
+
+Professional Resume
+
+</h2>
+
+<p>
+
+View or download my latest resume.
+
+</p>
+
+</div>
+
+<div class="resume-button">
+
+<a href="cv.pdf" target="_blank">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="resume-frame">
+
+<iframe src="cv.pdf"></iframe>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+
+Let's Connect
+
+</h3>
+
+<p>
+
+Business Intelligence Developer
+
+</p>
+
+<p>
+
+© 2026 Ripan Aich Sarkar
+
+</p>
+
+</footer>
+
+
+
+
+
+<!-- ================= CONTACT MODAL ================= -->
+
+<div id="contactModal">
+
+<!-- Part 3 -->
+
+</div>
+
+
+
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox">
+
+<!-- Part 3 -->
+
+</div>
+
+
+
+
+
+<script>
+
+<script>
+
+/* ==========================================================
+CONTACT MODAL
+========================================================== */
+
+const contactModal = document.getElementById("contactModal");
+
+function openContact(){
+
+contactModal.style.display="flex";
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeContact(){
+
+contactModal.style.display="none";
+
+document.body.style.overflow="auto";
+
+}
+
+contactModal.addEventListener("click",function(e){
+
+if(e.target===contactModal){
+
+closeContact();
+
+}
+
+});
+
+
+/* ==========================================================
+LIGHTBOX
+========================================================== */
+
+const gallery=document.querySelectorAll(".gallery img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImage=document.getElementById("lightbox-image");
+
+const prev=document.querySelector(".lightbox-prev");
+
+const next=document.querySelector(".lightbox-next");
+
+const closeBtn=document.querySelector(".lightbox-close");
+
+let current=0;
+
+gallery.forEach((img,index)=>{
+
+img.addEventListener("click",()=>{
+
+current=index;
+
+showImage();
+
+});
+
+});
+
+function showImage(){
+
+lightbox.style.display="flex";
+
+lightboxImage.src=gallery[current].src;
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeLightbox(){
+
+lightbox.style.display="none";
+
+document.body.style.overflow="auto";
+
+}
+
+function nextImage(){
+
+current++;
+
+if(current>=gallery.length){
+
+current=0;
+
+}
+
+showImage();
+
+}
+
+function prevImage(){
+
+current--;
+
+if(current<0){
+
+current=gallery.length-1;
+
+}
+
+showImage();
+
+}
+
+next.onclick=nextImage;
+
+prev.onclick=prevImage;
+
+closeBtn.onclick=closeLightbox;
+
+lightbox.addEventListener("click",function(e){
+
+if(e.target===lightbox){
+
+closeLightbox();
+
+}
+
+});
+
+
+/* ==========================================================
+KEYBOARD
+========================================================== */
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Escape"){
+
+closeLightbox();
+
+closeContact();
+
+}
+
+if(lightbox.style.display==="flex"){
+
+if(e.key==="ArrowRight"){
+
+nextImage();
+
+}
+
+if(e.key==="ArrowLeft"){
+
+prevImage();
+
+}
+
+}
+
+});
+
+
+/* ==========================================================
+SCROLL REVEAL
+========================================================== */
+
+const reveal=document.querySelectorAll(
+
+".section-title,.skills-grid span,.client-card,.gallery img,.resume-frame"
+
+);
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{threshold:.15});
+
+reveal.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(40px)";
+
+el.style.transition=".8s";
+
+observer.observe(el);
+
+});
+
+
+/* ==========================================================
+NAVBAR EFFECT
+========================================================== */
+
+const nav=document.querySelector("nav");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>40){
+
+nav.style.background="rgba(8,12,22,.92)";
+
+nav.style.boxShadow="0 15px 40px rgba(0,0,0,.35)";
+
+}else{
+
+nav.style.background="rgba(8,12,22,.65)";
+
+nav.style.boxShadow="none";
+
+}
+
+});
+
+
+/* ==========================================================
+ACTIVE NAV LINK
+========================================================== */
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll("nav ul a");
+
+window.addEventListener("scroll",()=>{
+
+let currentSection="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-140;
+
+if(pageYOffset>=top){
+
+currentSection=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.style.color="";
+
+if(link.getAttribute("href")==="#"+currentSection){
+
+link.style.color="#8FB2FF";
+
+}
+
+});
+
+});
+
+
+/* ==========================================================
+SMOOTH ENTRANCE
+========================================================== */
+
+window.onload=function(){
+
+document.body.style.opacity="1";
+
+};
+
+document.body.style.opacity="0";
+
+document.body.style.transition="opacity .6s ease";
+
+
+/* ==========================================================
+PRELOAD IMAGES
+========================================================== */
+
+gallery.forEach(img=>{
+
+const preload=new Image();
+
+preload.src=img.src;
+
+});
+
+
+/* ==========================================================
+MOBILE MENU (placeholder)
+========================================================== */
+
+document.querySelector(".mobile-menu").onclick=function(){
+
+alert("Mobile menu will be added in the next update.");
+
+};
+
+</script>
+
+</script>
+
+</body>
+
+</html>
