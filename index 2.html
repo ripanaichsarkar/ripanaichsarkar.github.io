@@ -1,1 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ripan Aich Sarkar • Business Intelligence Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+nav ul li a.active{
+
+color:white;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+mask-image:linear-gradient(to bottom,black,transparent);
+
+pointer-events:none;
+
+}
+<style>
+
+/* ===================================================
+   GLOBAL
+=================================================== */
+
+:root{
+
+--bg:#0B1120;
+--bg2:#111827;
+--card:#182235;
+--primary:#2F3C7E;
+--primary2:#4F5DBD;
+--text:#F8FAFC;
+--secondary:#CBD5E1;
+--border:rgba(255,255,255,.08);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+section{
+
+padding:110px 8%;
+
+}
+
+/* ===================================================
+NAVBAR
+=================================================== */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+
+height:75px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 8%;
+
+background:rgba(11,17,32,.75);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:22px;
+font-weight:700;
+letter-spacing:.5px;
+
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+nav a{
+
+color:var(--secondary);
+transition:.25s;
+
+}
+
+nav a:hover{
+
+color:white;
+
+}
+
+/* ===================================================
+HERO
+=================================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero-bg{
+
+position:absolute;
+
+width:900px;
+height:900px;
+
+background:radial-gradient(circle,
+rgba(47,60,126,.45),
+transparent 70%);
+
+filter:blur(30px);
+
+animation:float 10s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(35px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+position:relative;
+z-index:5;
+
+}
+
+.hello{
+
+font-size:18px;
+
+color:#9FB4FF;
+
+margin-bottom:18px;
+
+}
+
+.hero h1{
+
+font-size:72px;
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:15px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+font-weight:500;
+
+color:var(--secondary);
+
+margin-bottom:35px;
+
+}
+
+.bio{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:var(--secondary);
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+margin-top:45px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+
+}
+
+/* ===================================================
+BUTTONS
+=================================================== */
+
+.primary-btn,
+.secondary-btn,
+.hero button{
+
+padding:15px 30px;
+
+border-radius:14px;
+
+font-weight:600;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+border:none;
+
+}
+
+.primary-btn{
+
+background:var(--primary);
+color:white;
+
+}
+
+.primary-btn:hover{
+
+background:var(--primary2);
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 35px rgba(79,93,189,.4);
+
+}
+
+.secondary-btn{
+
+background:transparent;
+
+border:1px solid rgba(255,255,255,.12);
+
+color:white;
+
+}
+
+.secondary-btn:hover{
+
+background:rgba(255,255,255,.05);
+
+transform:translateY(-3px);
+
+}
+
+.hero button{
+
+background:white;
+color:#111;
+
+}
+
+.hero button:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ===================================================
+STATS
+=================================================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+margin-top:-40px;
+
+position:relative;
+
+z-index:10;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(16px);
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+padding:40px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.stat-card h2{
+
+font-size:46px;
+
+color:#9FB4FF;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+color:var(--secondary);
+
+}
+
+/* ===================================================
+SECTION TITLES
+=================================================== */
+
+.section-heading{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+font-size:44px;
+
+margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+color:var(--secondary);
+
+font-size:18px;
+
+}
+
+/* ===================================================
+GALLERY
+=================================================== */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+gap:35px;
+
+}
+
+.gallery img{
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.gallery img:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+box-shadow:0 25px 55px rgba(0,0,0,.55);
+
+}
+
+/* ===================================================
+RESUME
+=================================================== */
+
+.resume-buttons{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:35px;
+
+}
+
+.resume-viewer{
+
+background:#111;
+
+padding:12px;
+
+border-radius:20px;
+
+}
+
+iframe{
+
+width:100%;
+
+height:950px;
+
+border:none;
+
+border-radius:12px;
+
+}
+
+/* ===================================================
+FOOTER
+=================================================== */
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+color:#94A3B8;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+margin-top:100px;
+
+}
+
+footer strong{
+
+color:white;
+
+}
+
+/* ===================================================
+MODAL
+=================================================== */
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.72);
+
+backdrop-filter:blur(10px);
+
+z-index:9999;
+
+}
+
+.modal-content{
+
+width:420px;
+
+max-width:90%;
+
+margin:9% auto;
+
+background:#182235;
+
+padding:45px;
+
+border-radius:20px;
+
+text-align:center;
+
+position:relative;
+
+border:1px solid rgba(255,255,255,.08);
+
+animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+
+transform:scale(.85);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.modal-content h2{
+
+margin-bottom:35px;
+
+}
+
+.modal-content a{
+
+display:block;
+
+padding:16px;
+
+margin:15px 0;
+
+border-radius:12px;
+
+background:#2F3C7E;
+
+transition:.25s;
+
+}
+
+.modal-content a:hover{
+
+background:#4F5DBD;
+
+}
+
+.close{
+
+position:absolute;
+
+right:22px;
+top:16px;
+
+font-size:32px;
+
+cursor:pointer;
+
+}
+
+/* ===================================================
+LIGHTBOX
+=================================================== */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.95);
+
+z-index:99999;
+
+align-items:center;
+justify-content:center;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+
+border-radius:15px;
+
+}
+
+.close-lightbox{
+
+position:absolute;
+
+top:25px;
+right:40px;
+
+font-size:48px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+.prev,
+.next{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+background:rgba(255,255,255,.1);
+
+border:none;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+color:white;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+.prev{
+
+left:30px;
+
+}
+
+.next{
+
+right:30px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+background:#2F3C7E;
+
+}
+
+/* ===================================================
+RESPONSIVE
+=================================================== */
+
+@media(max-width:1100px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+padding:0 30px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.hero{
+
+padding-top:100px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.bio{
+
+font-size:17px;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+iframe{
+
+height:700px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- Navigation -->
+<!-- ========================= -->
+
+<nav>
+
+<div class="logo">
+
+Ripan Aich Sarkar
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#portfolio">Portfolio</a></li>
+
+<li><a href="#resume">Resume</a></li>
+
+<li><a href="#" onclick="openContact()">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section id="home" class="hero">
+
+<div class="hero-bg"></div>
+
+<div class="hero-content">
+
+<p class="hello">
+
+👋 Welcome
+
+</p>
+
+<h1>
+
+Ripan Aich Sarkar
+
+</h1>
+
+<h2>
+
+Business Intelligence Developer
+
+</h2>
+
+<p class="bio">
+
+Software Engineer & Data Analyst with <strong>4+ years of experience</strong>
+in Business Intelligence, Power BI, SQL, DAX, process automation and enterprise reporting.
+Skilled in developing interactive dashboards, automating workflows,
+and delivering data-driven solutions using Microsoft technologies and RPA platforms.
+Experienced in reporting, application support, testing,
+and process optimization across enterprise client environments.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="cv.pdf" class="primary-btn" target="_blank">
+
+📄 Resume
+
+</a>
+
+<a href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/"
+class="secondary-btn"
+target="_blank">
+
+💼 LinkedIn
+
+</a>
+
+<button onclick="openContact()">
+
+✉ Contact
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Stats -->
+<!-- ========================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+
+<h2>4+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>200+</h2>
+
+<p>Reports & Dashboards</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>Enterprise</h2>
+
+<p>Client Projects</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>Automation</h2>
+
+<p>Solutions Delivered</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Portfolio -->
+<!-- ========================= -->
+
+<section
+id="portfolio"
+class="portfolio">
+
+<div class="section-heading">
+
+<h2>
+
+Dashboard Portfolio
+
+</h2>
+
+<p>
+
+A collection of Power BI dashboards developed across
+enterprise reporting and business intelligence projects.
+
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="Dashboard 1.png">
+
+<img src="Dashboard 2.png">
+
+<img src="Dashboard 3.png">
+
+<img src="Dashboard 4.png">
+
+<img src="Dashboard 5.png">
+
+<img src="Dashboard 6.png">
+
+<img src="Dashboard 7.png">
+
+<img src="Dashboard 8.png">
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Resume -->
+<!-- ========================= -->
+
+<section
+id="resume"
+class="resume-section">
+
+<div class="section-heading">
+
+<h2>
+
+Resume
+
+</h2>
+
+<p>
+
+Download my resume or preview it below.
+
+</p>
+
+</div>
+
+<div class="resume-buttons">
+
+<a
+href="cv.pdf"
+target="_blank"
+class="primary-btn">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="resume-viewer">
+
+<iframe
+src="cv.pdf">
+
+</iframe>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+
+Designed & Developed by
+
+<strong>
+
+Ripan Aich Sarkar
+
+</strong>
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Contact Modal -->
+<!-- ========================= -->
+
+<div
+id="contactModal"
+class="modal">
+
+<div class="modal-content">
+
+<span
+class="close"
+onclick="closeContact()">
+
+&times;
+
+</span>
+
+<h2>
+
+Let's Connect
+
+</h2>
+
+<a
+href="mailto:ripanxyz@gmail.com">
+
+📧 Email Me
+
+</a>
+
+<a
+href="tel:+917003584376">
+
+📱 Call Me
+
+</a>
+
+<a
+href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/"
+target="_blank">
+
+💼 LinkedIn
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Image Lightbox -->
+<!-- ========================= -->
+
+<div
+id="lightbox"
+class="lightbox">
+
+<span
+class="close-lightbox">
+
+&times;
+
+</span>
+
+<img
+id="lightbox-img"
+src="">
+
+<button
+class="prev">
+
+❮
+
+</button>
+
+<button
+class="next">
+
+❯
+
+</button>
+
+</div>
+
+<script>
+
+/* ==============================
+   CONTACT MODAL
+============================== */
+
+const modal = document.getElementById("contactModal");
+
+function openContact() {
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function closeContact() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        closeContact();
+    }
+});
+
+/* ==============================
+   LIGHTBOX
+============================== */
+
+const galleryImages = document.querySelectorAll(".gallery img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeLightbox =
+document.querySelector(".close-lightbox");
+
+const prevBtn =
+document.querySelector(".prev");
+
+const nextBtn =
+document.querySelector(".next");
+
+let currentImage = 0;
+
+galleryImages.forEach((img,index)=>{
+
+    img.addEventListener("click",()=>{
+
+        currentImage=index;
+
+        showImage();
+
+    });
+
+});
+
+function showImage(){
+
+    lightbox.style.display="flex";
+
+    lightboxImg.src=
+    galleryImages[currentImage].src;
+
+    document.body.style.overflow="hidden";
+
+}
+
+function closeGallery(){
+
+    lightbox.style.display="none";
+
+    document.body.style.overflow="auto";
+
+}
+
+closeLightbox.onclick=closeGallery;
+
+lightbox.addEventListener("click",function(e){
+
+    if(e.target===lightbox){
+
+        closeGallery();
+
+    }
+
+});
+
+function nextImage(){
+
+    currentImage++;
+
+    if(currentImage>=galleryImages.length){
+
+        currentImage=0;
+
+    }
+
+    showImage();
+
+}
+
+function prevImage(){
+
+    currentImage--;
+
+    if(currentImage<0){
+
+        currentImage=galleryImages.length-1;
+
+    }
+
+    showImage();
+
+}
+
+nextBtn.onclick=nextImage;
+
+prevBtn.onclick=prevImage;
+
+/* ==============================
+   KEYBOARD
+============================== */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closeGallery();
+
+        closeContact();
+
+    }
+
+    if(lightbox.style.display==="flex"){
+
+        if(e.key==="ArrowRight"){
+
+            nextImage();
+
+        }
+
+        if(e.key==="ArrowLeft"){
+
+            prevImage();
+
+        }
+
+    }
+
+});
+
+/* ==============================
+   SWIPE SUPPORT (Mobile)
+============================== */
+
+let startX=0;
+
+lightbox.addEventListener("touchstart",(e)=>{
+
+    startX=e.touches[0].clientX;
+
+});
+
+lightbox.addEventListener("touchend",(e)=>{
+
+    let endX=e.changedTouches[0].clientX;
+
+    if(startX-endX>70){
+
+        nextImage();
+
+    }
+
+    if(endX-startX>70){
+
+        prevImage();
+
+    }
+
+});
+/* ===================================================
+   SCROLL REVEAL ANIMATION
+=================================================== */
+
+const revealElements = document.querySelectorAll(
+".section-heading, .stat-card, .gallery img, .resume-viewer"
+);
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+revealElements.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(40px)";
+el.style.transition="all .8s ease";
+
+observer.observe(el);
+
+});
+
+
+/* ===================================================
+   NAVBAR BACKGROUND
+=================================================== */
+
+const navbar=document.querySelector("nav");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>80){
+
+navbar.style.background="rgba(11,17,32,.92)";
+navbar.style.boxShadow="0 8px 30px rgba(0,0,0,.35)";
+
+}else{
+
+navbar.style.background="rgba(11,17,32,.75)";
+navbar.style.boxShadow="none";
+
+}
+
+});
+
+
+/* ===================================================
+   ACTIVE NAV LINK
+=================================================== */
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-140;
+
+const height=section.offsetHeight;
+
+if(pageYOffset>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+
+/* ===================================================
+   STAT COUNTER
+=================================================== */
+
+const statCards=document.querySelectorAll(".stat-card h2");
+
+let counterStarted=false;
+
+function animateCounters(){
+
+if(counterStarted) return;
+
+const trigger=document.querySelector(".stats");
+
+const rect=trigger.getBoundingClientRect();
+
+if(rect.top<window.innerHeight-100){
+
+counterStarted=true;
+
+statCards.forEach(card=>{
+
+const txt=card.innerText;
+
+if(txt.includes("Years")) return;
+
+if(txt==="Enterprise") return;
+
+if(txt==="Automation") return;
+
+const final=parseInt(txt.replace("+",""));
+
+let count=0;
+
+const speed=Math.max(10,Math.floor(100/final));
+
+const timer=setInterval(()=>{
+
+count++;
+
+card.innerHTML=count+"+";
+
+if(count>=final){
+
+clearInterval(timer);
+
+card.innerHTML=txt;
+
+}
+
+},speed);
+
+});
+
+}
+
+}
+
+window.addEventListener("scroll",animateCounters);
+
+animateCounters();
+
+
+/* ===================================================
+   SMOOTH BUTTON RIPPLE
+=================================================== */
+
+document.querySelectorAll(
+".primary-btn,.secondary-btn,.hero button,.contact-btn"
+).forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.transition=".25s";
+
+});
+
+});
+
+
+/* ===================================================
+   HERO PARALLAX
+=================================================== */
+
+const heroBg=document.querySelector(".hero-bg");
+
+window.addEventListener("mousemove",(e)=>{
+
+const x=(window.innerWidth/2-e.clientX)/40;
+const y=(window.innerHeight/2-e.clientY)/40;
+
+heroBg.style.transform=
+`translate(${x}px,${y}px)`;
+
+});
+
+
+/* ===================================================
+   PAGE FADE IN
+=================================================== */
+
+window.addEventListener("load",()=>{
+
+document.body.style.opacity="1";
+
+});
+
+document.body.style.opacity="0";
+document.body.style.transition="opacity .8s ease";
+
+
+/* ===================================================
+   IMAGE PRELOAD
+=================================================== */
+
+galleryImages.forEach(img=>{
+
+const preload=new Image();
+
+preload.src=img.src;
+
+});
+
+
+/* ===================================================
+   END
+=================================================== */
+</script>
+
+</body>
+
+</html>
