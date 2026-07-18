@@ -3,1896 +3,3290 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ripan Aich Sarkar • Business Intelligence Developer</title>
+   <title>Ripan Aich Sarkar • Business Intelligence Developer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 
-<style>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 
-/* ==========================================================
+   <style>
+      /* ==========================================================
    RIPAN AICH SARKAR PORTFOLIO
    VERSION 2.0
 ========================================================== */
 
-:root{
+      :root {
 
---bg:#080C16;
---bg2:#111827;
---card:#121B2C;
---primary:#2F3C7E;
---primary-light:#4F6EF7;
---text:#F8FAFC;
---text2:#CBD5E1;
---border:rgba(255,255,255,.08);
+         --bg: #080C16;
+         --bg2: #111827;
+         --card: #121B2C;
+         --primary: #2F3C7E;
+         --primary-light: #4F6EF7;
+         --text: #F8FAFC;
+         --text2: #CBD5E1;
+         --border: rgba(255, 255, 255, .08);
 
---shadow:0 15px 45px rgba(0,0,0,.35);
+         --shadow: 0 15px 45px rgba(0, 0, 0, .35);
 
-}
+         /* Navbar */
+         --nav-bg: rgba(8, 12, 22, 0.65);
+         --nav-bg-scrolled: rgba(8, 12, 22, 0.92);
+         --nav-shadow: 0 15px 40px rgba(0, 0, 0, .35);
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+         /* Buttons */
+         --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+         --btn-secondary-border: rgba(255, 255, 255, 0.1);
+         --btn-secondary-text: white;
+         --btn-secondary-hover-bg: rgba(255, 255, 255, 0.08);
+         --btn-accent-bg: white;
+         --btn-accent-text: #111827;
 
-html{
+         /* Modals */
+         --modal-bg: rgba(8, 12, 22, 0.85);
+         --contact-btn-bg: rgba(255, 255, 255, 0.05);
+         --contact-btn-text: white;
+         --contact-btn-hover-bg: rgba(255, 255, 255, 0.1);
 
-overflow-x:hidden;
+         /* Carousel */
+         --carousel-btn-bg: rgba(255, 255, 255, 0.03);
+         --carousel-btn-border: rgba(255, 255, 255, 0.08);
+         --carousel-btn-text: white;
+         --carousel-dot-bg: rgba(255, 255, 255, 0.2);
 
-}
+         /* Gradients */
+         --bio-gradient: linear-gradient(90deg, #00e5ff 0%, #3b82f6 35%, #a855f7 70%, #ff5b94 100%);
 
-body{
+      }
 
-background:var(--bg);
+      body.light-theme {
+         --bg: #F8FAFC;
+         --bg2: #F1F5F9;
+         --card: #FFFFFF;
+         --primary: #1E3A8A;
+         --primary-light: #2563EB;
+         --text: #0F172A;
+         --text2: #475569;
+         --border: rgba(15, 23, 42, 0.08);
+         --shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
 
-color:var(--text);
+         /* Navbar */
+         --nav-bg: rgba(248, 250, 252, 0.65);
+         --nav-bg-scrolled: rgba(248, 250, 252, 0.92);
+         --nav-shadow: 0 15px 40px rgba(15, 23, 42, 0.05);
 
-font-family:'Inter',sans-serif;
+         /* Buttons */
+         --btn-secondary-bg: rgba(15, 23, 42, 0.05);
+         --btn-secondary-border: rgba(15, 23, 42, 0.08);
+         --btn-secondary-text: var(--text);
+         --btn-secondary-hover-bg: rgba(15, 23, 42, 0.08);
+         --btn-accent-bg: var(--text);
+         --btn-accent-text: white;
 
-overflow-x:hidden;
+         /* Modals */
+         --modal-bg: rgba(15, 23, 42, 0.4);
+         --contact-btn-bg: rgba(15, 23, 42, 0.05);
+         --contact-btn-text: var(--text);
+         --contact-btn-hover-bg: rgba(15, 23, 42, 0.08);
 
-line-height:1.6;
+         /* Carousel */
+         --carousel-btn-bg: rgba(15, 23, 42, 0.03);
+         --carousel-btn-border: rgba(15, 23, 42, 0.08);
+         --carousel-btn-text: var(--text);
+         --carousel-dot-bg: rgba(15, 23, 42, 0.2);
 
-}
+         /* Gradients */
+         --bio-gradient: linear-gradient(90deg, #0284c7 0%, #2563eb 35%, #7c3aed 70%, #ff4d7d 100%);
+      }
 
-img{
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         scroll-behavior: smooth;
+      }
 
-display:block;
-max-width:100%;
+      html {
 
-}
+         overflow-x: hidden;
 
-a{
+      }
 
-text-decoration:none;
-color:inherit;
+      body {
 
-}
+         background: var(--bg);
 
-button{
+         color: var(--text);
 
-font-family:inherit;
+         font-family: 'Plus Jakarta Sans', sans-serif;
 
-}
+         overflow-x: hidden;
+
+         line-height: 1.6;
+
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .logo {
+
+         font-family: 'Outfit', sans-serif;
+
+      }
+
+      img {
+
+         display: block;
+         max-width: 100%;
+
+      }
+
+      a {
+
+         text-decoration: none;
+         color: inherit;
+
+      }
+
+      button {
+
+         font-family: inherit;
+
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 NAVBAR
 ========================================================== */
 
-nav{
+      nav {
 
-position:fixed;
+         position: fixed;
 
-top:0;
-left:0;
-right:0;
+         top: 0;
+         left: 0;
+         right: 0;
 
-height:78px;
+         height: 78px;
 
-display:flex;
+         display: flex;
 
-justify-content:space-between;
+         justify-content: space-between;
 
-align-items:center;
+         align-items: center;
 
-padding:0 8%;
+         padding: 0 8%;
 
-background:rgba(8,12,22,.65);
+         background-color: var(--nav-bg);
 
-backdrop-filter:blur(18px);
+         -webkit-backdrop-filter: blur(18px);
 
-border-bottom:1px solid rgba(255,255,255,.04);
+         backdrop-filter: blur(18px);
 
-z-index:9999;
+         border-bottom: 1px solid var(--border);
 
-transition:.35s;
+         z-index: 9999;
 
-}
+         transition: transform 0.35s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-.logo{
+      }
 
-font-size:26px;
+      nav.scrolled {
+         background-color: var(--nav-bg-scrolled);
+         box-shadow: var(--nav-shadow);
+      }
 
-font-weight:800;
+      .logo {
 
-letter-spacing:2px;
+         font-size: 26px;
 
-color:white;
+         font-weight: 800;
 
-}
+         letter-spacing: 2px;
 
-nav ul{
+         color: white;
 
-display:flex;
+      }
 
-align-items:center;
+      /* Dot accent — green gloss in dark mode */
+      .logo-dot {
+         color: #4ade80;
+         text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.35),
+            0 0 5px rgba(74, 222, 128, 1),
+            0 0 14px rgba(34, 197, 94, 0.75),
+            0 0 30px rgba(34, 197, 94, 0.4),
+            0 0 55px rgba(34, 197, 94, 0.2);
+         transition: color 0.8s ease, text-shadow 0.8s ease;
+      }
 
-gap:38px;
+      /* Dot accent — cherry-red gloss in light mode */
+      body.light-theme .logo-dot {
+         color: #e63946;
+         text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.5),
+            0 0 5px rgba(230, 57, 70, 1),
+            0 0 14px rgba(220, 38, 38, 0.75),
+            0 0 30px rgba(220, 38, 38, 0.45),
+            0 0 55px rgba(220, 38, 38, 0.2);
+      }
 
-list-style:none;
+      nav ul {
 
-}
+         display: flex;
 
-nav ul a{
+         align-items: center;
 
-font-size:15px;
+         gap: 38px;
 
-font-weight:500;
+         list-style: none;
 
-color:var(--text2);
+      }
 
-transition:.3s;
+      nav ul a {
 
-}
+         font-size: 15px;
 
-nav ul a:hover{
+         font-weight: 500;
 
-color:white;
+         color: var(--text2);
 
-}
+         transition: .3s;
 
-nav button{
+      }
 
-background:var(--primary);
+      nav ul a:hover {
 
-border:none;
+         color: white;
 
-color:white;
+      }
 
-padding:11px 24px;
+      nav button {
 
-border-radius:30px;
+         background: var(--primary);
 
-cursor:pointer;
+         border: none;
 
-font-weight:600;
+         color: white;
 
-transition:.3s;
+         padding: 11px 24px;
 
-}
+         border-radius: 30px;
 
-nav button:hover{
+         cursor: pointer;
 
-background:var(--primary-light);
+         font-weight: 600;
 
-transform:translateY(-2px);
+         transition: transform 0.3s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-}
+         display: inline-flex;
 
-.mobile-menu{
+         align-items: center;
 
-display:none;
+         justify-content: center;
 
-font-size:30px;
+         gap: 8px;
 
-cursor:pointer;
+      }
 
-}
+      nav button:hover {
+
+         background: var(--primary-light);
+
+         transform: translateY(-2px);
+
+      }
+
+      .mobile-menu {
+
+         display: none;
+
+         font-size: 30px;
+
+         cursor: pointer;
+
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 HERO
 ========================================================== */
 
-#hero{
+      #hero {
 
-min-height:100vh;
+         min-height: 100vh;
 
-display:flex;
+         display: flex;
 
-justify-content:center;
+         justify-content: center;
 
-align-items:center;
+         align-items: center;
 
-padding:140px 8% 90px;
+         padding: 140px 8% 90px;
 
-position:relative;
+         position: relative;
 
-overflow:hidden;
+         overflow: hidden;
 
-}
+      }
 
 
-/* Animated Grid */
+      /* Animated Grid */
 
-.background-grid{
+      .background-grid {
 
-position:absolute;
+         position: absolute;
 
-inset:0;
+         inset: 0;
 
-background-image:
+         background-image:
 
-linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+            linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
 
-linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+            linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
 
-background-size:65px 65px;
+         background-size: 65px 65px;
 
-mask-image:linear-gradient(to bottom,black,transparent);
+         mask-image: linear-gradient(to bottom, black, transparent);
 
-opacity:.5;
+         opacity: .5;
 
-}
+      }
 
 
-/* Glow */
+      /* Glow */
 
-.hero-glow{
+      .hero-glow {
 
-position:absolute;
+         position: absolute;
 
-width:650px;
+         width: 650px;
 
-height:650px;
+         height: 650px;
 
-border-radius:50%;
+         border-radius: 50%;
 
-filter:blur(120px);
+         filter: blur(120px);
 
-opacity:.35;
+         opacity: .35;
 
-animation:float 8s ease-in-out infinite;
+         animation: float 8s ease-in-out infinite;
 
-}
+      }
 
-.glow1{
+      .glow1 {
 
-background:#2F3C7E;
+         background: #2F3C7E;
 
-top:-200px;
+         top: -200px;
 
-left:-120px;
+         left: -120px;
 
-}
+      }
 
-.glow2{
+      .glow2 {
 
-background:#4F6EF7;
+         background: #4F6EF7;
 
-bottom:-250px;
+         bottom: -250px;
 
-right:-120px;
+         right: -120px;
 
-animation-delay:3s;
+         animation-delay: 3s;
 
-}
+      }
 
-@keyframes float{
+      @keyframes float {
 
-0%{
+         0% {
 
-transform:translateY(0px);
+            transform: translateY(0px);
 
-}
+         }
 
-50%{
+         50% {
 
-transform:translateY(35px);
+            transform: translateY(35px);
 
-}
+         }
 
-100%{
+         100% {
 
-transform:translateY(0px);
+            transform: translateY(0px);
 
-}
+         }
 
-}
+      }
 
-.hero-content{
+      .hero-content {
 
-max-width:930px;
+         max-width: 930px;
 
-text-align:center;
+         text-align: center;
 
-position:relative;
+         position: relative;
 
-z-index:5;
+         z-index: 5;
 
-}
+      }
 
-.welcome{
+      .welcome {
 
-font-size:19px;
+         font-size: 19px;
 
-font-weight:500;
+         font-weight: 500;
 
-color:#8FB2FF;
+         color: #8FB2FF;
 
-margin-bottom:18px;
+         margin-bottom: 18px;
 
-}
+      }
 
-.hero h1{
+      .hero h1 {
 
-font-size:78px;
+         font-size: 78px;
 
-font-weight:900;
+         font-weight: 900;
 
-line-height:1.05;
+         line-height: 1.05;
 
-margin-bottom:18px;
+         margin-bottom: 18px;
 
-background:linear-gradient(
+         background: linear-gradient(90deg,
 
-90deg,
+               white,
 
-white,
+               #8FB2FF);
 
-#8FB2FF
+         -webkit-background-clip: text;
 
-);
+         background-clip: text;
 
--webkit-background-clip:text;
+         -webkit-text-fill-color: transparent;
 
--webkit-text-fill-color:transparent;
+      }
 
-}
+      .hero h2 {
 
-.hero h2{
+         font-size: 30px;
 
-font-size:30px;
+         font-weight: 600;
 
-font-weight:600;
+         margin-bottom: 18px;
 
-margin-bottom:18px;
+         color: white;
 
-color:white;
+      }
 
-}
+      .specialization {
 
-.specialization{
+         font-size: 17px;
 
-font-size:17px;
+         letter-spacing: 1px;
 
-letter-spacing:1px;
+         color: #9FB4FF;
 
-color:#9FB4FF;
+         margin-bottom: 28px;
 
-margin-bottom:28px;
+      }
 
-}
+      .status {
 
-.status{
+         display: inline-flex;
 
-display:inline-flex;
+         align-items: center;
 
-align-items:center;
+         gap: 10px;
 
-gap:10px;
+         padding: 10px 22px;
 
-padding:10px 22px;
+         border-radius: 40px;
 
-border-radius:40px;
+         background: rgba(47, 60, 126, .22);
 
-background:rgba(47,60,126,.22);
+         border: 1px solid rgba(79, 110, 247, .4);
 
-border:1px solid rgba(79,110,247,.4);
+         margin-bottom: 35px;
 
-margin-bottom:35px;
+         font-size: 15px;
 
-font-size:15px;
+         font-weight: 600;
 
-font-weight:600;
+      }
 
-}
+      .bio {
 
-.bio{
+         font-size: 19px;
 
-font-size:19px;
+         line-height: 1.9;
 
-line-height:1.9;
+         color: var(--text2);
 
-color:var(--text2);
+         max-width: 850px;
 
-max-width:850px;
+         margin: auto;
 
-margin:auto;
+      }
 
-}
+      /* Gradient highlight on bold phrases inside bio — desktop & mobile */
+      .bio strong {
+         background-image: var(--bio-gradient);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         color: transparent;
+         font-weight: 700;
+      }
 
-.hero-buttons{
+      .hero-buttons {
 
-margin-top:50px;
+         margin-top: 50px;
 
-display:flex;
+         display: flex;
 
-justify-content:center;
+         justify-content: center;
 
-flex-wrap:wrap;
+         flex-wrap: wrap;
 
-gap:18px;
+         gap: 18px;
 
-}
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 BUTTONS
 ========================================================== */
 
-.hero-buttons a,
+      .hero-buttons a,
 
-.hero-buttons button{
+      .hero-buttons button {
 
-padding:16px 32px;
+         padding: 16px 32px;
 
-border-radius:14px;
+         border-radius: 14px;
 
-font-size:16px;
+         font-size: 16px;
 
-font-weight:600;
+         font-weight: 600;
 
-transition:.35s;
+         transition: transform 0.35s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-cursor:pointer;
+         cursor: pointer;
 
-}
+         display: inline-flex;
 
-.hero-buttons a:first-child{
+         align-items: center;
 
-background:var(--primary);
+         justify-content: center;
 
-color:white;
+         gap: 10px;
 
-box-shadow:0 15px 40px rgba(47,60,126,.35);
+      }
 
-}
+      .hero-buttons a svg,
 
-.hero-buttons a:first-child:hover{
+      .hero-buttons button svg,
 
-background:var(--primary-light);
+      nav button svg,
 
-transform:translateY(-4px);
+      .resume-button a svg {
 
-}
+         flex-shrink: 0;
 
-.hero-buttons a:nth-child(2){
+         transition: .3s ease;
 
-background:rgba(255,255,255,.05);
+      }
 
-border:1px solid rgba(255,255,255,.1);
+      .hero-buttons a:hover svg,
 
-color:white;
+      .hero-buttons button:hover svg,
 
-backdrop-filter:blur(10px);
+      nav button:hover svg,
 
-}
+      .resume-button a:hover svg {
 
-.hero-buttons a:nth-child(2):hover{
+         transform: scale(1.15);
 
-background:rgba(255,255,255,.08);
+      }
 
-transform:translateY(-4px);
+      .hero-buttons a:first-child {
 
-}
+         background: var(--primary);
 
-.hero-buttons button{
+         color: white;
 
-background:white;
+         box-shadow: 0 15px 40px rgba(47, 60, 126, .35);
 
-color:#111827;
+      }
 
-border:none;
+      .hero-buttons a:first-child:hover {
 
-}
+         background: var(--primary-light);
 
-.hero-buttons button:hover{
+         transform: translateY(-4px);
 
-transform:translateY(-4px);
+      }
 
-box-shadow:var(--shadow);
+      .hero-buttons a:nth-child(2) {
 
-}
+         background: var(--btn-secondary-bg);
+
+         border: 1px solid var(--btn-secondary-border);
+
+         color: var(--btn-secondary-text);
+
+         backdrop-filter: blur(10px);
+
+      }
+
+      .hero-buttons a:nth-child(2):hover {
+
+         background: var(--btn-secondary-hover-bg);
+
+         transform: translateY(-4px);
+
+      }
+
+      .hero-buttons button {
+
+         background: var(--btn-accent-bg);
+
+         color: var(--btn-accent-text);
+
+         border: none;
+
+      }
+
+      .hero-buttons button:hover {
+
+         transform: translateY(-4px);
+
+         box-shadow: var(--shadow);
+
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 SCROLL INDICATOR
 ========================================================== */
 
-.scroll-indicator{
+      .scroll-indicator {
 
-margin-top:75px;
+         margin-top: 75px;
 
-font-size:15px;
+         font-size: 15px;
 
-color:var(--text2);
+         color: var(--text2);
 
-animation:bounce 2s infinite;
+         animation: bounce 2s infinite;
 
-}
+      }
 
-@keyframes bounce{
+      @keyframes bounce {
 
-0%,100%{
+         0%,
+         100% {
 
-transform:translateY(0);
+            transform: translateY(0);
 
-}
+         }
 
-50%{
+         50% {
 
-transform:translateY(10px);
+            transform: translateY(10px);
 
-}
+         }
 
-}
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 COMMON SECTIONS
 ========================================================== */
 
-section{
+      section {
 
-padding:110px 8%;
+         padding: 75px 8%;
 
-}
+      }
 
-.section-title{
+      .section-title {
 
-max-width:900px;
+         max-width: 900px;
 
-margin:0 auto 70px;
+         margin: 0 auto 70px;
 
-text-align:center;
+         text-align: center;
 
-}
+      }
 
-.section-title h2{
+      .section-title h2 {
 
-font-size:46px;
+         font-size: 46px;
 
-margin-bottom:15px;
+         margin-bottom: 0;
 
-}
+      }
 
-.section-title p{
+      /* === Animated wavy underline === */
+      .wave-underline {
+         display: block;
+         margin: -6px auto 15px;
+         width: 200px;
+         height: 16px;
+         overflow: visible;
+      }
 
-font-size:18px;
+      .wave-underline path {
+         fill: none;
+         stroke: url(#waveGradient);
+         stroke-width: 2.5;
+         /* Thinner, more elegant line */
+         stroke-linecap: round;
+         stroke-linejoin: round;
+         /* Path is 200px wide, total path length is ~205px. Using 220 is safe. */
+         stroke-dasharray: 220;
+         stroke-dashoffset: 220;
+         /* Soft, subtle neon glow */
+         filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.4)) drop-shadow(0 0 5px rgba(236, 72, 153, 0.25));
+      }
 
-color:var(--text2);
+      .wave-underline.drawn path {
+         stroke-dashoffset: 0;
+         /* Only animate drawing when entering viewport; exit/reset happens instantly */
+         transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+      }
 
-line-height:1.8;
+      /* Light theme — deeper blue to crimson gradient and high contrast shadow */
+      body.light-theme .wave-underline path {
+         stroke: url(#waveGradientLight);
+         filter: drop-shadow(0 1px 1px rgba(190, 24, 93, 0.12));
+         /* Softer shadow */
+      }
 
-}
-/* ==========================================================
+      .section-title p {
+
+         font-size: 18px;
+
+         color: var(--text2);
+
+         line-height: 1.8;
+
+      }
+
+      /* ==========================================================
 CORE EXPERTISE
 ========================================================== */
 
-.skills-grid{
+      .skills-grid {
 
-display:flex;
+         display: flex;
 
-flex-wrap:wrap;
+         flex-wrap: wrap;
 
-justify-content:center;
+         justify-content: center;
 
-gap:18px;
+         gap: 18px;
 
-max-width:1100px;
+         max-width: 1100px;
 
-margin:auto;
+         margin: auto;
 
-}
+      }
 
-.skills-grid span{
+      .skills-grid span {
 
-padding:15px 24px;
+         padding: 12px 22px;
 
-background:rgba(255,255,255,.04);
+         background: var(--card);
 
-border:1px solid var(--border);
+         border: 1px solid var(--border);
 
-border-radius:50px;
+         border-radius: 50px;
 
-font-size:15px;
+         font-size: 15px;
 
-font-weight:600;
+         font-weight: 600;
 
-color:var(--text);
+         color: var(--text);
 
-backdrop-filter:blur(15px);
+         backdrop-filter: blur(15px);
 
-transition:.35s;
+         transition: transform 0.35s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-cursor:default;
+         cursor: default;
 
-}
+         display: inline-flex;
 
-.skills-grid span:hover{
+         align-items: center;
 
-transform:translateY(-6px);
+         gap: 10px;
 
-background:var(--primary);
+      }
 
-box-shadow:0 15px 35px rgba(47,60,126,.35);
+      .skills-grid span:hover {
 
-}
+         transform: translateY(-6px);
+
+         background: var(--primary);
+
+         color: white;
+
+         box-shadow: 0 15px 35px rgba(47, 60, 126, .35);
+
+         border-color: rgba(255, 255, 255, .2);
+
+      }
+
+      .skill-icon {
+
+         flex-shrink: 0;
+
+         transition: .35s;
+
+      }
+
+      .skills-grid span:hover .skill-icon {
+
+         transform: scale(1.15);
+
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 ENTERPRISE CLIENTS
 ========================================================== */
 
-.client-grid{
+      .client-grid {
 
-display:grid;
+         display: grid;
 
-grid-template-columns:repeat(4,1fr);
+         grid-template-columns: repeat(4, 1fr);
 
-gap:28px;
+         gap: 28px;
 
-margin-top:60px;
+         margin-top: 60px;
 
-}
+      }
 
-.client-card{
+      .client-card {
 
-height:170px;
+         height: 170px;
 
-display:flex;
+         display: flex;
 
-justify-content:center;
+         justify-content: center;
 
-align-items:center;
+         align-items: center;
 
-background:rgba(255,255,255,.04);
+         text-align: center;
 
-border:1px solid var(--border);
+         padding: 20px;
 
-border-radius:20px;
+         font-size: 20px;
 
-backdrop-filter:blur(15px);
+         font-weight: 600;
 
-transition:.35s;
+         letter-spacing: .5px;
 
-overflow:hidden;
+         line-height: 1.5;
 
-}
+         color: var(--text2);
 
-.client-card:hover{
+         background: rgba(255, 255, 255, 0.92);
 
-transform:translateY(-8px);
+         border: 1px solid rgba(255, 255, 255, 0.1);
 
-box-shadow:0 20px 45px rgba(0,0,0,.35);
+         border-radius: 20px;
 
-border-color:rgba(79,110,247,.45);
+         backdrop-filter: blur(15px);
 
-}
+         overflow: hidden;
 
-.client-card{
+         transition: transform 0.35s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-display:flex;
+      }
 
-justify-content:center;
+      .client-card:hover {
 
-align-items:center;
+         transform: translateY(-8px);
 
-text-align:center;
+         box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
 
-padding:20px;
+         border-color: rgba(79, 110, 247, .45);
 
-font-size:20px;
+      }
 
-font-weight:600;
+      .client-logo {
+         max-width: 75%;
+         max-height: 50%;
+         object-fit: contain;
+         transition: transform 0.3s ease, filter 0.3s ease;
+         opacity: 1;
+      }
 
-letter-spacing:.5px;
-
-line-height:1.5;
-
-color:#CBD5E1;
-
-transition:.35s;
-
-}
-
-.chanel:hover{
-
-color:white;
-
-}
-
-.bcbsma:hover{
-
-color:#2A7FFF;
-
-}
-
-.lifepoint:hover{
-
-color:#22C55E;
-
-}
-
-.northwestern:hover{
-
-color:#8B5CF6;
-
-}
+      .client-card:hover .client-logo {
+         transform: scale(1.04);
+      }
 
 
-/* ==========================================================
-PORTFOLIO
+
+
+
+      .chanel:hover {
+
+         color: white;
+
+      }
+
+      .bcbsma:hover {
+
+         color: #2A7FFF;
+
+      }
+
+      .lifepoint:hover {
+
+         color: #22C55E;
+
+      }
+
+      .northwestern:hover {
+
+         color: #8B5CF6;
+
+      }
+
+
+      /* ==========================================================
+PORTFOLIO CAROUSEL
 ========================================================== */
 
-.gallery{
+      .carousel-container {
+         position: relative;
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 50px;
+      }
 
-column-count:2;
+      .carousel-track-container {
+         overflow: hidden;
+         position: relative;
+         width: 100%;
+      }
 
-column-gap:28px;
+      .carousel-track {
+         display: flex;
+         transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+         will-change: transform;
+      }
 
-}
+      .carousel-slide {
+         flex: 0 0 50%;
+         padding: 0 12px;
+         box-sizing: border-box;
+      }
 
-.gallery img{
+      .carousel-slide img {
+         width: 100%;
+         border-radius: 18px;
+         cursor: pointer;
+         box-shadow: var(--shadow);
+         transition: transform 0.35s ease, box-shadow 0.35s ease;
+      }
 
-width:100%;
+      .carousel-slide img:hover {
+         transform: translateY(-8px) scale(1.02);
+         box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.45),
+            0 0 25px rgba(79, 110, 247, 0.20);
+      }
 
-margin-bottom:28px;
+      /* Navigation Buttons */
+      .carousel-prev,
+      .carousel-next {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background: var(--carousel-btn-bg);
+         border: 1px solid var(--carousel-btn-border);
+         backdrop-filter: blur(10px);
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         color: var(--carousel-btn-text);
+         font-size: 20px;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: 0.3s ease;
+         z-index: 10;
+      }
 
-border-radius:18px;
+      .carousel-prev:hover,
+      .carousel-next:hover {
+         background: var(--primary-light);
+         border-color: transparent;
+         color: white;
+         transform: translateY(-50%) scale(1.1);
+         box-shadow: 0 8px 25px rgba(79, 110, 247, 0.4);
+      }
 
-cursor:pointer;
+      .carousel-prev {
+         left: -10px;
+      }
 
-box-shadow:var(--shadow);
+      .carousel-next {
+         right: -10px;
+      }
 
-transition:.35s;
+      /* Indicators */
+      .carousel-dots {
+         display: flex;
+         justify-content: center;
+         gap: 10px;
+         margin-top: 30px;
+      }
 
-break-inside:avoid;
+      .carousel-dot {
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background: var(--carousel-dot-bg);
+         border: none;
+         cursor: pointer;
+         transition: 0.3s ease;
+      }
 
-}
+      .carousel-dot.active {
+         background: var(--primary-light);
+         width: 25px;
+         border-radius: 5px;
+      }
 
-.gallery img:hover{
+      /* Responsiveness */
+      @media (max-width: 1024px) {
+         .carousel-slide {
+            flex: 0 0 100%;
+         }
+      }
 
-transform:translateY(-8px);
+      @media (max-width: 640px) {
+         .carousel-container {
+            padding: 0 10px;
+         }
 
-box-shadow:
+         .carousel-slide {
+            flex: 0 0 100%;
+            padding: 0 5px;
+         }
 
-0 20px 50px rgba(0,0,0,.45),
+         .carousel-prev,
+         .carousel-next {
+            display: none;
+         }
+      }
 
-0 0 25px rgba(79,110,247,.20);
 
-}
+      /* ==========================================================
+THEME TRANSITIONS & LIGHT MODE ADJUSTMENTS
+========================================================== */
+
+      body,
+      nav,
+      section,
+      footer,
+      .client-card,
+      .skills-grid span,
+      .contact-box,
+      #contactModal,
+      .resume-frame,
+      .hero-buttons a,
+      .hero-buttons button,
+      nav button,
+      .resume-button a,
+      h1,
+      h2,
+      h3,
+      p,
+      a,
+      .logo,
+      .mobile-menu,
+      .background-grid,
+      .hero-glow {
+         transition: background 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            backdrop-filter 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      body.light-theme .background-grid {
+         background-image:
+            linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+         opacity: 0.8;
+      }
+
+      body.light-theme .hero-glow {
+         opacity: 0.15;
+      }
+
+      body.light-theme .welcome {
+         color: var(--primary-light);
+      }
+
+      body.light-theme .hero h1 {
+         background: linear-gradient(90deg,
+               var(--text),
+               var(--primary));
+         -webkit-background-clip: text;
+         background-clip: text;
+      }
+
+      body.light-theme .hero h2 {
+         color: var(--text);
+      }
+
+      body.light-theme .specialization {
+         color: var(--primary);
+      }
+
+      body.light-theme .logo {
+         color: var(--text);
+      }
+
+      body.light-theme nav ul a:hover {
+         color: #000;
+      }
+
+      body.light-theme nav ul.active {
+         background: rgba(248, 250, 252, 0.96);
+         border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      body.light-theme #contactModal {
+         background: rgba(15, 23, 42, 0.4);
+      }
+
+      body.light-theme .chanel:hover {
+         color: #000;
+      }
+
+      body.light-theme .client-card {
+         background: #FFFFFF;
+         border-color: var(--border);
+      }
 
 
-/* ==========================================================
+
+      body.light-theme ::-webkit-scrollbar-track {
+         background: #F1F5F9;
+      }
+
+      body.light-theme ::-webkit-scrollbar-thumb {
+         background: #CBD5E1;
+      }
+
+      body.light-theme ::-webkit-scrollbar-thumb:hover {
+         background: #94A3B8;
+      }
+
+      /* Theme Toggle Button */
+      .nav-right {
+         display: flex;
+         align-items: center;
+         gap: 25px;
+      }
+
+      .theme-toggle-btn {
+         background: rgba(255, 255, 255, 0.05);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         color: var(--text2);
+         width: 40px;
+         height: 40px;
+         min-width: 40px;
+         min-height: 40px;
+         max-width: 40px;
+         max-height: 40px;
+         border-radius: 50%;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         box-sizing: border-box;
+         font-size: 16px;
+         line-height: 1;
+         padding: 0;
+         transition: all 0.3s ease;
+      }
+
+      .theme-toggle-btn:hover {
+         background: rgba(255, 255, 255, 0.1);
+         color: white;
+         transform: scale(1.05);
+      }
+
+      body.light-theme .theme-toggle-btn {
+         background: rgba(15, 23, 42, 0.05);
+         border: 1px solid rgba(15, 23, 42, 0.08);
+         color: var(--text2);
+      }
+
+      body.light-theme .theme-toggle-btn:hover {
+         background: rgba(15, 23, 42, 0.1);
+         color: var(--text);
+      }
+
+      body.light-theme .theme-toggle-btn .sun-icon {
+         display: none;
+      }
+
+      body.light-theme .theme-toggle-btn .moon-icon {
+         display: block !important;
+      }
+
+      body:not(.light-theme) .theme-toggle-btn .sun-icon {
+         display: block !important;
+      }
+
+      body:not(.light-theme) .theme-toggle-btn .moon-icon {
+         display: none;
+      }
+
+
+      /* ==========================================================
 RESUME
 ========================================================== */
 
-.resume-button{
+      .resume-button {
 
-display:flex;
+         display: flex;
 
-justify-content:center;
+         justify-content: center;
 
-margin-bottom:35px;
+         margin-bottom: 35px;
 
-}
+      }
 
-.resume-button a{
+      .resume-button a {
 
-display:inline-block;
+         display: inline-flex;
 
-padding:15px 32px;
+         align-items: center;
 
-background:var(--primary);
+         justify-content: center;
 
-border-radius:14px;
+         gap: 10px;
 
-font-weight:600;
+         padding: 15px 32px;
 
-transition:.35s;
+         background: var(--primary);
 
-color:white;
+         border-radius: 14px;
 
-}
+         font-weight: 600;
 
-.resume-button a:hover{
+         transition: transform 0.35s ease, background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
-background:var(--primary-light);
+         color: white;
 
-transform:translateY(-3px);
+      }
 
-}
+      .resume-button a:hover {
 
-.resume-frame{
+         background: var(--primary-light);
 
-background:rgba(255,255,255,.04);
+         transform: translateY(-3px);
 
-border:1px solid var(--border);
+      }
 
-border-radius:22px;
+      .resume-window {
+         max-width: 640px;
+         margin: 0 auto;
+         background: #111827;
+         border: 1px solid var(--border);
+         border-radius: 16px;
+         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+         overflow: hidden;
+         transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      }
 
-padding:14px;
+      .resume-window:hover {
+         transform: translateY(-4px);
+         box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5), 0 0 15px rgba(79, 110, 247, 0.15);
+         border-color: rgba(79, 110, 247, 0.3);
+      }
 
-backdrop-filter:blur(15px);
+      .window-header {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 12px 20px;
+         background: rgba(255, 255, 255, 0.03);
+         border-bottom: 1px solid var(--border);
+      }
 
-}
+      .window-dots {
+         display: flex;
+         gap: 8px;
+         align-items: center;
+      }
 
-.resume-frame iframe{
+      .window-dot {
+         width: 12px;
+         height: 12px;
+         border-radius: 50%;
+         display: inline-block;
+      }
 
-width:100%;
+      .window-dot.red {
+         background: #ff5f56;
+      }
 
-height:1050px;
+      .window-dot.yellow {
+         background: #ffbd2e;
+      }
 
-border:none;
+      .window-dot.green {
+         background: #27c93f;
+      }
 
-border-radius:14px;
+      .window-title {
+         color: var(--text2);
+         font-size: 13px;
+         font-weight: 500;
+         font-family: 'Plus Jakarta Sans', sans-serif;
+         letter-spacing: 0.5px;
+      }
 
-background:white;
+      .window-actions {
+         display: flex;
+         align-items: center;
+      }
 
-}
+      .window-open-btn {
+         color: var(--text2);
+         opacity: 0.6;
+         display: flex;
+         align-items: center;
+         transition: opacity 0.2s, color 0.2s;
+      }
+
+      .window-open-btn:hover {
+         opacity: 1;
+         color: var(--primary-light);
+      }
+
+      .resume-frame {
+         background: #1f2937;
+         padding: 0;
+         border: none;
+         border-radius: 0;
+         backdrop-filter: none;
+      }
+
+      .resume-frame iframe {
+         display: block;
+         width: 100%;
+         height: 850px;
+         border: none;
+         background: #1f2937;
+      }
+
+      /* Light theme overrides for mock window */
+      body.light-theme .resume-window {
+         background: #f1f5f9;
+         box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+      }
+
+      body.light-theme .window-header {
+         background: rgba(15, 23, 42, 0.02);
+      }
+
+      body.light-theme .resume-frame {
+         background: #e2e8f0;
+      }
+
+      body.light-theme .resume-frame iframe {
+         background: #e2e8f0;
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 FOOTER
 ========================================================== */
 
-footer{
+      footer {
 
-margin-top:120px;
+         margin-top: 0;
 
-padding:80px 20px;
+         padding: 100px 20px 80px;
 
-text-align:center;
+         text-align: center;
 
-border-top:1px solid rgba(255,255,255,.05);
+         border-top: 1px solid var(--border);
 
-background:#060A12;
+         background: var(--bg);
+         position: relative;
+         overflow: hidden;
 
-}
+      }
 
-footer h3{
+      /* Footer line grid — mirrored hero grid, fades from bottom up */
+      footer .background-grid {
+         mask-image: linear-gradient(to top, black, transparent);
+         opacity: 0.4;
+      }
 
-font-size:28px;
+      /* Footer glow positions — mirrored from hero */
+      footer .glow1 {
+         top: auto;
+         bottom: -180px;
+         left: -120px;
+      }
 
-margin-bottom:12px;
+      footer .glow2 {
+         top: -180px;
+         bottom: auto;
+         right: -120px;
+      }
 
-}
+      /* Ensure footer content sits above decorative layers */
+      footer .footer-content {
+         position: relative;
+         z-index: 1;
+      }
 
-footer p{
+      footer h3 {
 
-color:var(--text2);
+         font-size: 28px;
 
-margin-top:8px;
+         margin-bottom: 12px;
 
-font-size:16px;
+         background: var(--bio-gradient);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         display: inline-block;
 
-}
+      }
+
+      footer p {
+
+         color: var(--text2);
+
+         margin-top: 8px;
+
+         font-size: 16px;
+
+      }
+
+      /* Light theme footer */
+      body.light-theme footer {
+         background: var(--bg);
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 SECTION DIVIDER
 ========================================================== */
 
-#skills,
-#clients,
-#portfolio,
-#resume{
+      #skills,
+      #clients,
+      #portfolio,
+      #resume {
 
-position:relative;
+         position: relative;
 
-}
+      }
 
-#skills::before,
-#clients::before,
-#portfolio::before,
-#resume::before{
+      /* ==========================================================
+SECTION BACKGROUND PATTERNS
+Each section uses ::after for the dot-grid pattern
+(::before is reserved for the top divider line)
+========================================================== */
 
-content:"";
+      #skills,
+      #clients,
+      #portfolio,
+      #resume {
+         overflow: hidden;
+      }
 
-position:absolute;
+      /* Core Expertise, Trusted Enterprise, Dashboard Snapshots, Resume — unified continuous dot-grid */
+      #skills::after,
+      #clients::after,
+      #portfolio::after,
+      #resume::after {
+         content: "";
+         position: absolute;
+         inset: 0;
+         /* Consistent 28px spacing and 1.2px dot size aligns perfectly across borders */
+         background-image: radial-gradient(circle, rgba(79, 110, 247, 0.15) 1.2px, transparent 1.2px);
+         background-size: 28px 28px;
+         background-position: center top;
+         pointer-events: none;
+         z-index: 0;
+      }
 
-top:0;
+      /* Ensure all section children sit above the pattern */
+      #skills>*,
+      #clients>*,
+      #portfolio>*,
+      #resume>* {
+         position: relative;
+         z-index: 1;
+      }
 
-left:50%;
+      /* Only fade the dot grid at the very top of skills and very bottom of resume to merge with hero/footer */
+      #skills::after {
+         mask-image: linear-gradient(to bottom, transparent 0%, black 150px);
+         -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 150px);
+      }
 
-transform:translateX(-50%);
+      #resume::after {
+         mask-image: linear-gradient(to top, transparent 0%, black 150px);
+         -webkit-mask-image: linear-gradient(to top, transparent 0%, black 150px);
+      }
 
-width:140px;
+      /* Light theme pattern overrides — dark dots on light background */
+      body.light-theme #skills::after,
+      body.light-theme #clients::after,
+      body.light-theme #portfolio::after,
+      body.light-theme #resume::after {
+         background-image: radial-gradient(circle, rgba(15, 23, 42, 0.06) 1.2px, transparent 1.2px);
+      }
 
-height:2px;
+      /* Hero bottom gradient fade — dissolves hero into the dot-grid sections */
+      #hero::after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         height: 220px;
+         background: linear-gradient(to bottom, transparent, var(--bg));
+         pointer-events: none;
+         z-index: 3;
+      }
 
-background:
+      /* Footer top gradient fade — dissolves dot-grid sections into footer */
+      footer::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         height: 220px;
+         background: linear-gradient(to top, transparent, var(--bg));
+         pointer-events: none;
+         z-index: 3;
+      }
 
-linear-gradient(
-
-90deg,
-
-transparent,
-
-var(--primary-light),
-
-transparent
-
-);
-
-opacity:.65;
-
-}
-/* ==========================================================
+      /* ==========================================================
 CONTACT MODAL
 ========================================================== */
 
-<div id="contactModal">
+      #contactModal {
+         display: none;
+         position: fixed;
+         inset: 0;
+         background: var(--modal-bg);
+         backdrop-filter: blur(14px);
+         z-index: 99999;
+         justify-content: center;
+         align-items: center;
+         padding: 20px;
+      }
 
-<div class="contact-box">
+      .contact-box {
+         background: var(--card);
+         border: 1px solid var(--border);
+         border-radius: 24px;
+         padding: 45px 35px;
+         width: 100%;
+         max-width: 480px;
+         text-align: center;
+         position: relative;
+         box-shadow: var(--shadow);
+         animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
 
-<span class="close-contact" onclick="closeContact()">&times;</span>
+      @keyframes modalFadeIn {
+         from {
+            opacity: 0;
+            transform: scale(0.92) translateY(20px);
+         }
 
-<h2>Let's Connect</h2>
+         to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+         }
+      }
 
-<p>
-I'd love to discuss Business Intelligence,
-Power BI, Automation, Reporting, or new opportunities.
-</p>
+      .close-contact {
+         position: absolute;
+         top: 20px;
+         right: 24px;
+         font-size: 32px;
+         color: var(--text2);
+         cursor: pointer;
+         transition: 0.25s;
+         line-height: 1;
+      }
 
-<div class="contact-links">
+      .close-contact:hover {
+         color: var(--text);
+         transform: rotate(90deg);
+      }
 
-<a href="mailto:ripanxyz@gmail.com">
-📧 Email Me
-</a>
+      .contact-box h2 {
+         font-size: 28px;
+         font-weight: 800;
+         margin-bottom: 12px;
+         color: var(--text);
+      }
 
-<a href="tel:+917003584376">
-📱 Call Me
-</a>
+      .contact-box p {
+         color: var(--text2);
+         font-size: 16px;
+         margin-bottom: 30px;
+         line-height: 1.6;
+      }
 
-<a href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/" target="_blank">
-💼 LinkedIn
-</a>
+      .contact-links {
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+      }
 
-</div>
+      .contact-links a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 12px;
+         padding: 16px;
+         border-radius: 14px;
+         font-size: 16px;
+         font-weight: 600;
+         transition: 0.3s ease;
+         border: 1px solid rgba(255, 255, 255, 0.05);
+      }
 
-</div>
+      .contact-links a:nth-child(1) {
+         background: var(--primary);
+         color: white;
+         box-shadow: 0 10px 25px rgba(47, 60, 126, 0.3);
+      }
 
-</div>
+      .contact-links a:nth-child(1):hover {
+         background: var(--primary-light);
+         transform: translateY(-2px);
+      }
 
-/* ==========================================================
+      .contact-links a:nth-child(2) {
+         background: var(--contact-btn-bg);
+         color: var(--contact-btn-text);
+      }
+
+      .contact-links a:nth-child(2):hover {
+         background: var(--contact-btn-hover-bg);
+         transform: translateY(-2px);
+      }
+
+      .contact-links a:nth-child(3) {
+         background: #0077b5;
+         color: white;
+         box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
+      }
+
+      .contact-links a:nth-child(3):hover {
+         background: #0096e6;
+         transform: translateY(-2px);
+      }
+
+
+      /* ==========================================================
 LIGHTBOX
 ========================================================== */
 
-<div id="lightbox">
+      #lightbox {
+         display: none;
+         position: fixed;
+         inset: 0;
+         background: rgba(4, 6, 10, 0.95);
+         backdrop-filter: blur(8px);
+         z-index: 100000;
+         justify-content: center;
+         align-items: center;
+      }
 
-<span class="lightbox-close">&times;</span>
+      #lightbox-image {
+         max-width: 85%;
+         max-height: 85%;
+         border-radius: 14px;
+         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         animation: zoomIn 0.3s ease;
+      }
 
-<button class="lightbox-prev">&#10094;</button>
+      @keyframes zoomIn {
+         from {
+            transform: scale(0.95);
+            opacity: 0;
+         }
 
-<img id="lightbox-image">
+         to {
+            transform: scale(1);
+            opacity: 1;
+         }
+      }
 
-<button class="lightbox-next">&#10095;</button>
+      .lightbox-close {
+         position: absolute;
+         top: 25px;
+         right: 35px;
+         font-size: 45px;
+         color: var(--text2);
+         cursor: pointer;
+         transition: 0.25s;
+         z-index: 100002;
+      }
 
-</div>
-/* ==========================================================
+      .lightbox-close:hover {
+         color: white;
+         transform: rotate(90deg);
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background: rgba(255, 255, 255, 0.05);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         width: 55px;
+         height: 55px;
+         border-radius: 50%;
+         color: white;
+         font-size: 24px;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: 0.3s;
+         z-index: 100001;
+      }
+
+      .lightbox-prev:hover,
+      .lightbox-next:hover {
+         background: var(--primary-light);
+         border-color: transparent;
+         transform: translateY(-50%) scale(1.1);
+      }
+
+      .lightbox-prev {
+         left: 30px;
+      }
+
+      .lightbox-next {
+         right: 30px;
+      }
+
+      /* ==========================================================
 SCROLLBAR
 ========================================================== */
 
-::-webkit-scrollbar{
+      ::-webkit-scrollbar {
 
-width:11px;
+         width: 11px;
 
-}
+      }
 
-::-webkit-scrollbar-track{
+      ::-webkit-scrollbar-track {
 
-background:#0A101B;
+         background: #0A101B;
 
-}
+      }
 
-::-webkit-scrollbar-thumb{
+      ::-webkit-scrollbar-thumb {
 
-background:#2F3C7E;
+         background: #2F3C7E;
 
-border-radius:10px;
+         border-radius: 10px;
 
-}
+      }
 
-::-webkit-scrollbar-thumb:hover{
+      ::-webkit-scrollbar-thumb:hover {
 
-background:#4F6EF7;
+         background: #4F6EF7;
 
-}
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 TEXT SELECTION
 ========================================================== */
 
-::selection{
+      ::selection {
 
-background:#4F6EF7;
+         background: #4F6EF7;
 
-color:white;
+         color: white;
 
-}
+      }
 
 
-/* ==========================================================
+      /* ==========================================================
 RESPONSIVE
 ========================================================== */
 
-@media(max-width:1100px){
+      @media(max-width:1100px) {
 
-.hero h1{
+         .hero h1 {
 
-font-size:58px;
+            font-size: 58px;
 
-}
+         }
 
-.client-grid{
+         .client-grid {
 
-grid-template-columns:repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
 
-}
+         }
 
-.gallery{
 
-column-count:1;
 
-}
+         .resume-frame iframe {
 
-.resume-frame iframe{
+            height: 850px;
 
-height:850px;
+         }
 
-}
+      }
 
-}
+      @media(max-width:768px) {
 
-@media(max-width:768px){
+         nav {
 
-nav{
+            padding: 0 25px;
 
-padding:0 25px;
+            height: 72px;
 
-height:72px;
+         }
 
-}
+         nav ul {
 
-nav ul{
+            display: none;
 
-display:none;
+         }
 
-}
+         nav ul.active {
 
-.mobile-menu{
+            display: flex;
 
-display:block;
+            flex-direction: column;
 
-}
+            position: absolute;
 
-.hero{
+            top: 72px;
 
-padding-top:120px;
+            left: 0;
 
-}
+            width: 100%;
 
-.hero h1{
+            background: rgba(8, 12, 22, 0.96);
 
-font-size:42px;
+            backdrop-filter: blur(18px);
 
-}
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
 
-.hero h2{
+            padding: 40px 20px;
 
-font-size:24px;
+            gap: 25px;
 
-}
+            align-items: center;
 
-.bio{
+            z-index: 9998;
 
-font-size:17px;
+            animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
-line-height:1.8;
+         }
 
-}
+         @keyframes slideDown {
 
-.specialization{
+            from {
 
-font-size:15px;
+               opacity: 0;
 
-line-height:1.7;
+               transform: translateY(-10px);
 
-}
+            }
 
-.hero-buttons{
+            to {
 
-flex-direction:column;
+               opacity: 1;
 
-align-items:center;
+               transform: translateY(0);
 
-}
+            }
 
-.hero-buttons a,
+         }
 
-.hero-buttons button{
+         .mobile-menu {
 
-width:100%;
+            display: block;
 
-max-width:320px;
+         }
 
-text-align:center;
+         .hero {
 
-}
+            padding-top: 120px;
 
-.skills-grid{
+         }
 
-gap:14px;
+         .hero h1 {
 
-}
+            font-size: 42px;
 
-.skills-grid span{
+         }
 
-font-size:14px;
+         .hero h2 {
 
-padding:13px 18px;
+            font-size: 24px;
 
-}
+         }
 
-.client-grid{
+         .bio {
 
-grid-template-columns:1fr;
+            font-size: 17px;
 
-}
+            line-height: 1.8;
 
-.section-title h2{
+         }
 
-font-size:34px;
+         .bio strong {
+            font-weight: 700;
+         }
 
-}
+         .specialization {
 
-.section-title p{
+            font-size: 15px;
 
-font-size:16px;
+            line-height: 1.7;
 
-}
+         }
 
-.resume-frame iframe{
+         .hero-buttons {
 
-height:650px;
+            flex-direction: row;
 
-}
+            justify-content: center;
 
-footer{
+            flex-wrap: wrap;
 
-padding:60px 25px;
+            gap: 12px;
 
-}
+         }
 
-.lightbox-prev,
+         .hero-buttons a,
 
-.lightbox-next{
+         .hero-buttons button {
 
-display:none;
+            width: auto;
 
-}
+            padding: 12px 20px;
 
-#lightbox img{
+            font-size: 14px;
 
-max-width:100%;
+         }
 
-}
+         .skills-grid {
 
-}
-</style>
+            gap: 14px;
+
+         }
+
+         .skills-grid span {
+
+            font-size: 14px;
+
+            padding: 13px 18px;
+
+         }
+
+         .client-grid {
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 16px;
+
+            margin-top: 40px;
+
+         }
+
+         .client-card {
+
+            height: 110px;
+
+            font-size: 16px;
+
+            border-radius: 14px;
+
+         }
+
+         .section-title h2 {
+
+            font-size: 34px;
+
+         }
+
+         .section-title p {
+
+            font-size: 16px;
+
+         }
+
+         .resume-frame iframe {
+
+            height: 650px;
+
+         }
+
+         footer {
+
+            padding: 60px 25px;
+
+         }
+
+         .lightbox-prev,
+
+         .lightbox-next {
+
+            display: none;
+
+         }
+
+         #lightbox img {
+
+            max-width: 100%;
+
+         }
+
+      }
+   </style>
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+   <!-- ================= NAVBAR ================= -->
 
-<nav>
+   <nav>
 
-<a href="#hero" class="logo">
-Ripan.
-</a>
+      <a href="#hero" class="logo" id="logoText">
+         Ripan.
+      </a>
 
-<ul>
+      <div class="nav-right">
 
-<li><a href="#portfolio">Portfolio</a></li>
+         <ul>
 
-<li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
 
-<li>
-<button onclick="openContact()">
-Contact
-</button>
-</li>
+            <li><a href="#resume">Resume</a></li>
 
-</ul>
+            <li>
+               <button onclick="openContact()">
+                  <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                     <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  Contact
+               </button>
+            </li>
 
-<div class="mobile-menu">
+         </ul>
 
-☰
+         <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <circle cx="12" cy="12" r="5" />
+               <line x1="12" y1="1" x2="12" y2="3" />
+               <line x1="12" y1="21" x2="12" y2="23" />
+               <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+               <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+               <line x1="1" y1="12" x2="3" y2="12" />
+               <line x1="21" y1="12" x2="23" y2="12" />
+               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+         </button>
 
-</div>
+         <div class="mobile-menu">
 
-</nav>
+            ☰
 
+         </div>
 
+      </div>
 
+   </nav>
 
 
-<!-- ================= HERO ================= -->
 
-<section id="hero">
 
-<div class="background-grid"></div>
 
-<div class="hero-glow glow1"></div>
+   <!-- ================= HERO ================= -->
 
-<div class="hero-glow glow2"></div>
+   <section id="hero">
 
-<div class="hero-content">
+      <div class="background-grid"></div>
 
-<p class="welcome">
+      <div class="hero-glow glow1"></div>
 
-👋 Hello, I'm
+      <div class="hero-glow glow2"></div>
 
-</p>
+      <div class="hero-content">
 
-<h1>
+         <p class="welcome">
 
-Ripan Aich Sarkar
+            👋 Hello, I'm
 
-</h1>
+         </p>
 
-<h2>
+         <h1>
 
-Business Intelligence Developer
+            Ripan Aich Sarkar
 
-</h2>
+         </h1>
 
-<p class="specialization">
+         <h2>
 
-Power BI • SQL • DAX • Enterprise Reporting • Automation
+            Business Intelligence Developer
 
-</p>
+         </h2>
 
-<div class="status">
+         <p class="specialization">
 
-🟢 Available for Immediate Joining
+            Power BI • SQL • DAX • Enterprise Reporting • Automation
 
-</div>
+         </p>
 
-<p class="bio">
+         <div class="status">
 
-Software Engineer & Data Analyst with <strong>4+ years of experience</strong> in Business Intelligence, Power BI, SQL, DAX, process automation, and enterprise reporting.
+            🟢 Available for Immediate Joining
 
-<strong>Developed and maintained 200+ Power BI dashboards, MIS reports, and interactive visualizations</strong>, delivering actionable insights and driving data-informed business decisions.
+         </div>
 
-Skilled in building interactive dashboards, workflow automation solutions, and enterprise applications using Microsoft technologies and RPA platforms. Experienced in reporting, application support, testing, and process optimization across enterprise environments.
+         <p class="bio">
 
-</p>
+            Software Engineer & Data Analyst with <strong>4+ years of experience</strong> in Business Intelligence,
+            Power BI, SQL, DAX, process automation, and enterprise reporting.
 
-<div class="hero-buttons">
+            <strong>Developed and maintained 200+ Power BI dashboards, MIS reports, and interactive
+               visualizations</strong>, delivering actionable insights and driving data-informed business decisions.
 
-<a href="cv.pdf" target="_blank">
+            Skilled in building interactive dashboards, workflow automation solutions, and enterprise applications using
+            Microsoft technologies and RPA platforms. Experienced in reporting, application support, testing, and
+            process optimization across enterprise environments.
 
-📄 Resume
+         </p>
 
-</a>
+         <div class="hero-buttons">
 
-<a
-href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/"
-target="_blank">
+            <a href="cv.pdf" target="_blank">
 
-💼 LinkedIn
+               <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+               </svg>
+               Resume
 
-</a>
+            </a>
 
-<button onclick="openContact()">
+            <a href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/" target="_blank">
 
-✉ Contact
+               <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+               </svg>
+               LinkedIn
 
-</button>
+            </a>
 
-</div>
+            <button onclick="openContact()">
 
-<div class="scroll-indicator">
+               <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+               </svg>
+               Contact
 
-↓
+            </button>
 
-<br>
+         </div>
 
-Scroll to Explore
+         <div class="scroll-indicator">
 
-</div>
+            ↓
 
-</div>
+            <br>
 
-</section>
+            Scroll to Explore
 
+         </div>
 
+      </div>
 
+   </section>
 
 
-<!-- ================= SKILLS ================= -->
 
-<section id="skills">
 
-<div class="section-title">
 
-<h2>
+   <!-- ================= SKILLS ================= -->
 
-Core Expertise
+   <section id="skills">
 
-</h2>
+      <div class="section-title">
 
-<p>
+         <h2>
 
-Technologies and platforms used across
-Business Intelligence,
-Reporting,
-Automation,
-and Enterprise Solutions.
+            Core Expertise
 
-</p>
+         </h2>
 
-</div>
+         <svg class="wave-underline" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+            <defs>
+               <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00e5ff" stop-opacity="0" />
+                  <stop offset="20%" stop-color="#00e5ff" stop-opacity="1" />
+                  <stop offset="50%" stop-color="#3b82f6" stop-opacity="1" />
+                  <stop offset="80%" stop-color="#a855f7" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#ff5b94" stop-opacity="1" />
+               </linearGradient>
+               <linearGradient id="waveGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0284c7" stop-opacity="0" />
+                  <stop offset="20%" stop-color="#0284c7" stop-opacity="1" />
+                  <stop offset="50%" stop-color="#2563eb" stop-opacity="1" />
+                  <stop offset="80%" stop-color="#7c3aed" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#ff4d7d" stop-opacity="1" />
+               </linearGradient>
+            </defs>
+            <path d="M0,8 C16,2 32,14 48,8 C64,2 80,14 96,8 C112,2 128,14 144,8 C160,2 176,14 192,8 L200,8" />
+         </svg>
+
+         <p>
+
+            Technologies and platforms used across
+            Business Intelligence,
+            Reporting,
+            Automation,
+            and Enterprise Solutions.
+
+         </p>
+
+      </div>
+
+      <div class="skills-grid">
+
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 32 32" fill="none">
+               <rect x="4" y="16" width="6" height="12" rx="1" fill="#F2C811" />
+               <rect x="13" y="9" width="6" height="19" rx="1" fill="#F2A104" />
+               <rect x="22" y="2" width="6" height="26" rx="1" fill="#E17B00" />
+            </svg>
+            Power BI
+         </span>
+
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M9 20h2M12 4c-1.5 0-3 1-3 3v13M7 10h5" />
+               <path d="M14 10l4 6M18 10l-4 6" />
+            </svg>
+            DAX
+         </span>
+
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+               <path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4z"
+                  fill="#CC292B" />
+               <path d="M22 6c0 2.21-4.48 4-10 4S2 8.21 2 6" fill="#F15A5C" />
+               <path d="M2 12c0 2.21 4.48 4 10 4s10-1.79 10-4" stroke="#fff" stroke-width="1.5"
+                  stroke-dasharray="3 3" />
+            </svg>
+            SQL Server
+         </span>
+
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <rect x="3" y="3" width="18" height="18" rx="2" />
+               <path d="M21 9H3M21 15H3M12 3v18" />
+               <path d="M7.5 12l2 2 4-4" stroke-width="2.5" />
+            </svg>
+            Power Query
+         </span>
 
-<div class="skills-grid">
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+               <rect x="3" y="3" width="6" height="6" rx="1.5" fill="#0078D4" />
+               <rect x="15" y="3" width="6" height="6" rx="1.5" fill="#0078D4" />
+               <rect x="3" y="15" width="6" height="6" rx="1.5" fill="#0078D4" />
+               <rect x="15" y="15" width="6" height="6" rx="1.5" fill="#10B981" />
+               <path d="M9 6h6M6 9v6M18 9v6M9 18h6" stroke="#0078D4" stroke-width="1.5" />
+            </svg>
+            Dataverse
+         </span>
 
-<span>Power BI</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 32 32" fill="none">
+               <path d="M26.2 16L16 5.8 5.8 16 16 26.2 26.2 16z" fill="#0078D4" />
+               <path d="M16 5.8L5.8 16 16 26.2V5.8z" fill="#50E6FF" />
+               <path d="M16 12.8L12.8 16 16 19.2V12.8z" fill="#00188F" />
+            </svg>
+            Power Automate
+         </span>
 
-<span>DAX</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+               <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="#0072C6" />
+               <path d="M12 2v20M2 7l20 10M2 17l20-10" stroke="#fff" stroke-width="1" opacity="0.3" />
+               <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#00A4EF" fill-opacity="0.8" />
+            </svg>
+            Blue Prism
+         </span>
 
-<span>SQL Server</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <ellipse cx="6" cy="6" rx="4" ry="2" />
+               <path d="M2 6v6c0 1.1 1.8 2 4 2s4-.9 4-2V6" />
+               <path d="M11 12h4m-2-2l2 2-2 2" />
+               <ellipse cx="18" cy="18" rx="4" ry="2" />
+               <path d="M14 18v2c0 1.1 1.8 2 4 2s4-.9 4-2v-2" />
+            </svg>
+            ETL
+         </span>
 
-<span>Power Query</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 32 32" fill="none">
+               <path d="M16 3L5.5 13.5v5L16 29l10.5-10.5v-5L16 3z" fill="#742774" />
+               <path d="M16 3L5.5 13.5v5L16 16v-13z" fill="#AF1FAF" />
+               <path d="M16 16l10.5 2.5v-5L16 3v13z" fill="#C532C5" />
+            </svg>
+            Power Apps
+         </span>
 
-<span>Dataverse</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M3 3v18h18" />
+               <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+            </svg>
+            Business Intelligence
+         </span>
 
-<span>Power Automate</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366F1"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+               <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+            </svg>
+            Enterprise Reporting
+         </span>
 
-<span>Blue Prism</span>
+         <span>
+            <svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <circle cx="12" cy="12" r="3" />
+               <path
+                  d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+            </svg>
+            Automation
+         </span>
 
-<span>ETL</span>
+      </div>
 
-<span>Power Apps</span>
+   </section>
 
-<span>Business Intelligence</span>
 
-<span>Enterprise Reporting</span>
 
-<span>Automation</span>
 
-</div>
 
-</section>
+   <!-- ================= CLIENTS ================= -->
 
+   <section id="clients">
 
+      <div class="section-title">
 
+         <h2>
 
+            Trusted Across Enterprise Organizations
 
-<!-- ================= CLIENTS ================= -->
+         </h2>
 
-<section id="clients">
+         <svg class="wave-underline" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+            <path d="M0,8 C16,2 32,14 48,8 C64,2 80,14 96,8 C112,2 128,14 144,8 C160,2 176,14 192,8 L200,8" />
+         </svg>
 
-<div class="section-title">
+         <p>
 
-<h2>
+            Delivered Business Intelligence,
+            Reporting,
+            Process Automation,
+            and Application Support solutions
+            for enterprise organizations.
 
-Trusted Across Enterprise Organizations
+         </p>
 
-</h2>
+         <div class="client-grid">
 
-<p>
+            <div class="client-card chanel">
+               <img src="assets/chanel-logo.png" alt="CHANEL" class="client-logo">
+            </div>
 
-Delivered Business Intelligence,
-Reporting,
-Process Automation,
-and Application Support solutions
-for enterprise organizations.
+            <div class="client-card bcbsma">
+               <img src="assets/bcbsma-logo.png" alt="BCBSMA" class="client-logo">
+            </div>
 
-</p>
+            <div class="client-card lifepoint">
+               <img src="assets/lifepoint-logo.png" alt="LifePoint Health" class="client-logo">
+            </div>
 
-<div class="client-grid">
+            <div class="client-card northwestern">
+               <img src="assets/northwestern-logo.png" alt="Northwestern Medicine" class="client-logo">
+            </div>
 
-<div class="client-card chanel">
-CHANEL
-</div>
+         </div>
 
-<div class="client-card bcbsma">
-BCBSMA
-</div>
+   </section>
 
-<div class="client-card lifepoint">
-LifePoint Health
-</div>
 
-<div class="client-card northwestern">
-Northwestern Medicine
-</div>
 
-</div>
 
-</section>
 
+   <!-- ================= PORTFOLIO ================= -->
 
+   <section id="portfolio">
 
+      <div class="section-title">
 
+         <h2>
 
-<!-- ================= PORTFOLIO ================= -->
+            Selected Dashboard Snapshots
 
-<section id="portfolio">
+         </h2>
 
-<div class="section-title">
+         <svg class="wave-underline" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+            <path d="M0,8 C16,2 32,14 48,8 C64,2 80,14 96,8 C112,2 128,14 144,8 C160,2 176,14 192,8 L200,8" />
+         </svg>
 
-<h2>
+         <p>
 
-Selected Dashboard Snapshots
+            Representative dashboard samples showcasing
+            business intelligence,
+            enterprise reporting,
+            KPI visualization,
+            and operational reporting capabilities.
 
-</h2>
+         </p>
 
-<p>
+      </div>
 
-Representative dashboard samples showcasing
-business intelligence,
-enterprise reporting,
-KPI visualization,
-and operational reporting capabilities.
+      <div class="carousel-container">
+         <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+         <div class="carousel-track-container">
+            <div class="carousel-track">
+               <div class="carousel-slide"><img src="Dashboard 1.png" alt="Dashboard 1"></div>
+               <div class="carousel-slide"><img src="Dashboard 2.png" alt="Dashboard 2"></div>
+               <div class="carousel-slide"><img src="Dashboard 3.png" alt="Dashboard 3"></div>
+               <div class="carousel-slide"><img src="Dashboard 4.png" alt="Dashboard 4"></div>
+               <div class="carousel-slide"><img src="Dashboard 5.png" alt="Dashboard 5"></div>
+               <div class="carousel-slide"><img src="Dashboard 6.png" alt="Dashboard 6"></div>
+               <div class="carousel-slide"><img src="Dashboard 7.png" alt="Dashboard 7"></div>
+               <div class="carousel-slide"><img src="Dashboard 8.png" alt="Dashboard 8"></div>
+            </div>
+         </div>
+         <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+         <div class="carousel-dots"></div>
+      </div>
 
-</p>
+   </section>
 
-</div>
 
-<div class="gallery">
 
-<img src="Dashboard 1.png" alt="Dashboard 1">
 
-<img src="Dashboard 2.png" alt="Dashboard 2">
 
-<img src="Dashboard 3.png" alt="Dashboard 3">
+   <!-- ================= RESUME ================= -->
 
-<img src="Dashboard 4.png" alt="Dashboard 4">
+   <section id="resume">
 
-<img src="Dashboard 5.png" alt="Dashboard 5">
+      <div class="section-title">
 
-<img src="Dashboard 6.png" alt="Dashboard 6">
+         <h2>
 
-<img src="Dashboard 7.png" alt="Dashboard 7">
+            Professional Resume
 
-<img src="Dashboard 8.png" alt="Dashboard 8">
+         </h2>
 
-</div>
+         <svg class="wave-underline" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+            <path d="M0,8 C16,2 32,14 48,8 C64,2 80,14 96,8 C112,2 128,14 144,8 C160,2 176,14 192,8 L200,8" />
+         </svg>
 
-</section>
+         <p>
 
+            View or download my latest resume.
 
+         </p>
 
+      </div>
 
+      <div class="resume-button">
 
-<!-- ================= RESUME ================= -->
+         <a href="cv.pdf" target="_blank">
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+               <polyline points="7 10 12 15 17 10" />
+               <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
+         </a>
 
-<section id="resume">
+      </div>
 
-<div class="section-title">
+      <div class="resume-window">
+         <div class="window-header">
+            <div class="window-dots">
+               <span class="window-dot red"></span>
+               <span class="window-dot yellow"></span>
+               <span class="window-dot green"></span>
+            </div>
+            <div class="window-title">cv.pdf</div>
+            <div class="window-actions">
+               <a href="cv.pdf" target="_blank" title="Open in New Tab" class="window-open-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round">
+                     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                     <polyline points="15 3 21 3 21 9" />
+                     <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+               </a>
+            </div>
+         </div>
+         <div class="resume-frame">
+            <iframe src="cv.pdf"></iframe>
+         </div>
+      </div>
 
-<h2>
+   </section>
 
-Professional Resume
 
-</h2>
 
-<p>
 
-View or download my latest resume.
 
-</p>
+   <!-- ================= FOOTER ================= -->
 
-</div>
+   <footer>
 
-<div class="resume-button">
+      <div class="background-grid"></div>
+      <div class="hero-glow glow1"></div>
+      <div class="hero-glow glow2"></div>
 
-<a href="cv.pdf" target="_blank">
+      <div class="footer-content">
 
-Download Resume
+         <h3>
 
-</a>
+            Let's Connect
 
-</div>
+         </h3>
 
-<div class="resume-frame">
+         <p>
 
-<iframe src="cv.pdf"></iframe>
+            Business Intelligence Developer
 
-</div>
+         </p>
 
-</section>
+         <p>
 
+            © 2026 Ripan Aich Sarkar
 
+         </p>
 
+      </div>
 
+   </footer>
 
-<!-- ================= FOOTER ================= -->
 
-<footer>
 
-<h3>
 
-Let's Connect
 
-</h3>
+   <!-- ================= CONTACT MODAL ================= -->
 
-<p>
+   <div id="contactModal">
 
-Business Intelligence Developer
+      <div class="contact-box">
 
-</p>
+         <span class="close-contact" onclick="closeContact()">&times;</span>
 
-<p>
+         <h2>Let's Connect</h2>
 
-© 2026 Ripan Aich Sarkar
+         <p>
+            I'd love to discuss Business Intelligence,
+            Power BI, Automation, Reporting, or new opportunities.
+         </p>
 
-</p>
+         <div class="contact-links">
 
-</footer>
+            <a href="mailto:ripanxyz@gmail.com">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+               </svg>
+               Email Me
+            </a>
 
+            <a href="tel:+917003584376">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C7.61 21 3 16.39 3 11a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z" />
+               </svg>
+               Call Me
+            </a>
 
+            <a href="https://www.linkedin.com/in/ripan-aich-sarkar-8759a2175/" target="_blank">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+               </svg>
+               LinkedIn
+            </a>
 
+         </div>
 
+      </div>
 
-<!-- ================= CONTACT MODAL ================= -->
+   </div>
 
-<div id="contactModal">
 
-<!-- Part 3 -->
 
-</div>
 
 
+   <!-- ================= LIGHTBOX ================= -->
 
+   <div id="lightbox">
 
+      <span class="lightbox-close">&times;</span>
 
-<!-- ================= LIGHTBOX ================= -->
+      <button class="lightbox-prev">&#10094;</button>
 
-<div id="lightbox">
+      <img id="lightbox-image">
 
-<!-- Part 3 -->
+      <button class="lightbox-next">&#10095;</button>
 
-</div>
+   </div>
 
 
 
 
 
-<script>
+   <script>
 
 
 
-/* ==========================================================
-CONTACT MODAL
-========================================================== */
+      /* ==========================================================
+      CONTACT MODAL
+      ========================================================== */
 
-const contactModal = document.getElementById("contactModal");
+      const contactModal = document.getElementById("contactModal");
 
-function openContact(){
+      function openContact() {
 
-contactModal.style.display="flex";
+         contactModal.style.display = "flex";
 
-document.body.style.overflow="hidden";
+         document.body.style.overflow = "hidden";
 
-}
+      }
 
-function closeContact(){
+      function closeContact() {
 
-contactModal.style.display="none";
+         contactModal.style.display = "none";
 
-document.body.style.overflow="auto";
+         document.body.style.overflow = "auto";
 
-}
+      }
 
-contactModal.addEventListener("click",function(e){
+      contactModal.addEventListener("click", function (e) {
 
-if(e.target===contactModal){
+         if (e.target === contactModal) {
 
-closeContact();
+            closeContact();
 
-}
+         }
 
-});
+      });
 
 
-/* ==========================================================
-LIGHTBOX
-========================================================== */
+      /* ==========================================================
+      LIGHTBOX
+      ========================================================== */
 
-const gallery=document.querySelectorAll(".gallery img");
+      const gallery = document.querySelectorAll(".carousel-slide img");
 
-const lightbox=document.getElementById("lightbox");
+      const lightbox = document.getElementById("lightbox");
 
-const lightboxImage=document.getElementById("lightbox-image");
+      const lightboxImage = document.getElementById("lightbox-image");
 
-const prev=document.querySelector(".lightbox-prev");
+      const prev = document.querySelector(".lightbox-prev");
 
-const next=document.querySelector(".lightbox-next");
+      const next = document.querySelector(".lightbox-next");
 
-const closeBtn=document.querySelector(".lightbox-close");
+      const closeBtn = document.querySelector(".lightbox-close");
 
-let current=0;
+      let current = 0;
 
-gallery.forEach((img,index)=>{
+      gallery.forEach((img, index) => {
 
-img.addEventListener("click",()=>{
+         img.addEventListener("click", () => {
 
-current=index;
+            current = index;
 
-showImage();
+            showImage();
 
-});
+         });
 
-});
+      });
 
-function showImage(){
+      function showImage() {
 
-lightbox.style.display="flex";
+         lightbox.style.display = "flex";
 
-lightboxImage.src=gallery[current].src;
+         lightboxImage.src = gallery[current].src;
 
-document.body.style.overflow="hidden";
+         document.body.style.overflow = "hidden";
 
-}
+      }
 
-function closeLightbox(){
+      function closeLightbox() {
 
-lightbox.style.display="none";
+         lightbox.style.display = "none";
 
-document.body.style.overflow="auto";
+         document.body.style.overflow = "auto";
 
-}
+      }
 
-function nextImage(){
+      function nextImage() {
 
-current++;
+         current++;
 
-if(current>=gallery.length){
+         if (current >= gallery.length) {
 
-current=0;
+            current = 0;
 
-}
+         }
 
-showImage();
+         showImage();
 
-}
+      }
 
-function prevImage(){
+      function prevImage() {
 
-current--;
+         current--;
 
-if(current<0){
+         if (current < 0) {
 
-current=gallery.length-1;
+            current = gallery.length - 1;
 
-}
+         }
 
-showImage();
+         showImage();
 
-}
+      }
 
-next.onclick=nextImage;
+      next.onclick = nextImage;
 
-prev.onclick=prevImage;
+      prev.onclick = prevImage;
 
-closeBtn.onclick=closeLightbox;
+      closeBtn.onclick = closeLightbox;
 
-lightbox.addEventListener("click",function(e){
+      lightbox.addEventListener("click", function (e) {
 
-if(e.target===lightbox){
+         if (e.target === lightbox) {
 
-closeLightbox();
+            closeLightbox();
 
-}
+         }
 
-});
+      });
 
 
-/* ==========================================================
-KEYBOARD
-========================================================== */
+      /* ==========================================================
+      KEYBOARD
+      ========================================================== */
 
-document.addEventListener("keydown",function(e){
+      document.addEventListener("keydown", function (e) {
 
-if(e.key==="Escape"){
+         if (e.key === "Escape") {
 
-closeLightbox();
+            closeLightbox();
 
-closeContact();
+            closeContact();
 
-}
+         }
 
-if(lightbox.style.display==="flex"){
+         if (lightbox.style.display === "flex") {
 
-if(e.key==="ArrowRight"){
+            if (e.key === "ArrowRight") {
 
-nextImage();
+               nextImage();
 
-}
+            }
 
-if(e.key==="ArrowLeft"){
+            if (e.key === "ArrowLeft") {
 
-prevImage();
+               prevImage();
 
-}
+            }
 
-}
+         }
 
-});
+      });
 
 
-/* ==========================================================
-SCROLL REVEAL
-========================================================== */
+      /* ==========================================================
+      SCROLL REVEAL
+      ========================================================== */
 
-const reveal=document.querySelectorAll(
+      const reveal = document.querySelectorAll(
 
-".section-title,.skills-grid span,.client-card,.gallery img,.resume-frame"
+         ".section-title,.skills-grid,.client-grid,.carousel-slide img,.resume-frame"
 
-);
+      );
 
-const observer=new IntersectionObserver((entries)=>{
+      const observer = new IntersectionObserver((entries) => {
 
-entries.forEach(entry=>{
+         entries.forEach(entry => {
 
-if(entry.isIntersecting){
+            if (entry.isIntersecting) {
 
-entry.target.style.opacity="1";
+               entry.target.style.opacity = "1";
 
-entry.target.style.transform="translateY(0)";
+               entry.target.style.transform = "translateY(0)";
 
-}
+            }
 
-});
+         });
 
-},{threshold:.15});
+      }, { threshold: .15 });
 
-reveal.forEach(el=>{
+      reveal.forEach(el => {
 
-el.style.opacity="0";
+         el.style.opacity = "0";
 
-el.style.transform="translateY(40px)";
+         el.style.transform = "translateY(40px)";
 
-el.style.transition=".8s";
+         el.style.transition = ".8s";
 
-observer.observe(el);
+         observer.observe(el);
 
-});
+      });
 
 
-/* ==========================================================
-NAVBAR EFFECT
-========================================================== */
+      /* ==========================================================
+      NAVBAR EFFECT
+      ========================================================== */
 
-const nav=document.querySelector("nav");
+      const nav = document.querySelector("nav");
 
-window.addEventListener("scroll",()=>{
+      window.addEventListener("scroll", () => {
 
-if(window.scrollY>40){
+         if (window.scrollY > 40) {
 
-nav.style.background="rgba(8,12,22,.92)";
+            nav.classList.add("scrolled");
 
-nav.style.boxShadow="0 15px 40px rgba(0,0,0,.35)";
+         } else {
 
-}else{
+            nav.classList.remove("scrolled");
 
-nav.style.background="rgba(8,12,22,.65)";
+         }
 
-nav.style.boxShadow="none";
+      });
 
-}
 
-});
+      /* ==========================================================
+      ACTIVE NAV LINK
+      ========================================================== */
 
+      const sections = document.querySelectorAll("section");
 
-/* ==========================================================
-ACTIVE NAV LINK
-========================================================== */
+      const navLinks = document.querySelectorAll("nav ul a");
 
-const sections=document.querySelectorAll("section");
+      window.addEventListener("scroll", () => {
 
-const navLinks=document.querySelectorAll("nav ul a");
+         let currentSection = "";
 
-window.addEventListener("scroll",()=>{
+         sections.forEach(section => {
 
-let currentSection="";
+            const top = section.offsetTop - 140;
 
-sections.forEach(section=>{
+            if (pageYOffset >= top) {
 
-const top=section.offsetTop-140;
+               currentSection = section.getAttribute("id");
 
-if(pageYOffset>=top){
+            }
 
-currentSection=section.getAttribute("id");
+         });
 
-}
+         navLinks.forEach(link => {
 
-});
+            link.style.color = "";
 
-navLinks.forEach(link=>{
+            if (link.getAttribute("href") === "#" + currentSection) {
 
-link.style.color="";
+               link.style.color = "#8FB2FF";
 
-if(link.getAttribute("href")==="#"+currentSection){
+            }
 
-link.style.color="#8FB2FF";
+         });
 
-}
+      });
 
-});
 
-});
+      /* ==========================================================
+      SMOOTH ENTRANCE
+      ========================================================== */
 
+      window.onload = function () {
 
-/* ==========================================================
-SMOOTH ENTRANCE
-========================================================== */
+         document.body.style.opacity = "1";
 
-window.onload=function(){
+      };
 
-document.body.style.opacity="1";
+      document.body.style.opacity = "0";
 
-};
+      document.body.style.transition = "opacity .6s ease";
 
-document.body.style.opacity="0";
 
-document.body.style.transition="opacity .6s ease";
+      /* ==========================================================
+      PRELOAD IMAGES
+      ========================================================== */
 
+      gallery.forEach(img => {
 
-/* ==========================================================
-PRELOAD IMAGES
-========================================================== */
+         const preload = new Image();
 
-gallery.forEach(img=>{
+         preload.src = img.src;
 
-const preload=new Image();
+      });
 
-preload.src=img.src;
 
-});
+      /* ==========================================================
+      MOBILE MENU
+      ========================================================== */
 
+      const mobileMenuBtn = document.querySelector(".mobile-menu");
+      const navList = document.querySelector("nav ul");
 
-/* ==========================================================
-MOBILE MENU (placeholder)
-========================================================== */
+      mobileMenuBtn.onclick = function () {
+         navList.classList.toggle("active");
+         mobileMenuBtn.innerHTML = navList.classList.contains("active") ? "✕" : "☰";
+      };
 
-document.querySelector(".mobile-menu").onclick=function(){
+      // Close mobile menu when clicking any nav item
+      document.querySelectorAll("nav ul a, nav ul button").forEach(item => {
+         item.addEventListener("click", () => {
+            navList.classList.remove("active");
+            mobileMenuBtn.innerHTML = "☰";
+         });
+      });
 
-alert("Mobile menu will be added in the next update.");
 
-};
+      /* ==========================================================
+      PORTFOLIO CAROUSEL CONTROLLER
+      ========================================================== */
 
-</script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+      const nextBtn = document.querySelector(".carousel-next");
+      const prevBtn = document.querySelector(".carousel-prev");
+      const dotsContainer = document.querySelector(".carousel-dots");
 
+      let currentIndex = 0;
+      let slidesPerPage = getSlidesPerPage();
 
+      function getSlidesPerPage() {
+         if (window.innerWidth <= 1024) return 1;
+         return 2;
+      }
 
+      function getMaxIndex() {
+         return Math.max(0, slides.length - slidesPerPage);
+      }
+
+      function createDots() {
+         dotsContainer.innerHTML = "";
+         const maxIndex = getMaxIndex();
+         for (let i = 0; i <= maxIndex; i++) {
+            const dot = document.createElement("button");
+            dot.classList.add("carousel-dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+               currentIndex = i;
+               updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+         }
+      }
+
+      function updateCarousel() {
+         const maxIndex = getMaxIndex();
+         if (currentIndex > maxIndex) currentIndex = maxIndex;
+         if (currentIndex < 0) currentIndex = 0;
+
+         const slideWidth = slides[0].getBoundingClientRect().width;
+         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+         // Update dots
+         const dots = Array.from(dotsContainer.querySelectorAll(".carousel-dot"));
+         dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+         });
+      }
+
+      nextBtn.addEventListener("click", () => {
+         const maxIndex = getMaxIndex();
+         if (currentIndex < maxIndex) {
+            currentIndex++;
+         } else {
+            currentIndex = 0; // Loop back
+         }
+         updateCarousel();
+      });
+
+      prevBtn.addEventListener("click", () => {
+         if (currentIndex > 0) {
+            currentIndex--;
+         } else {
+            currentIndex = getMaxIndex(); // Loop to end
+         }
+         updateCarousel();
+      });
+
+      // Touch Swipe Support
+      let swipeStartX = 0;
+      let swipeEndX = 0;
+
+      track.addEventListener("touchstart", (e) => {
+         swipeStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      track.addEventListener("touchend", (e) => {
+         swipeEndX = e.changedTouches[0].clientX;
+         handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+         const threshold = 50;
+         if (swipeStartX - swipeEndX > threshold) {
+            const maxIndex = getMaxIndex();
+            if (currentIndex < maxIndex) {
+               currentIndex++;
+               updateCarousel();
+            }
+         } else if (swipeEndX - swipeStartX > threshold) {
+            if (currentIndex > 0) {
+               currentIndex--;
+               updateCarousel();
+            }
+         }
+      }
+
+      window.addEventListener("resize", () => {
+         const oldPerPage = slidesPerPage;
+         slidesPerPage = getSlidesPerPage();
+         if (oldPerPage !== slidesPerPage) {
+            createDots();
+            updateCarousel();
+         } else {
+            updateCarousel();
+         }
+      });
+
+      // Initialize on load
+      createDots();
+      updateCarousel();
+
+
+      /* ==========================================================
+      THEME SWITCHER
+      ========================================================== */
+
+      const themeToggleBtn = document.getElementById("themeToggle");
+
+      // Check LocalStorage or system preference
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+      if (savedTheme === "light" || (!savedTheme && systemPrefersLight)) {
+         document.body.classList.add("light-theme");
+      } else {
+         document.body.classList.remove("light-theme");
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+         document.body.classList.toggle("light-theme");
+         const currentTheme = document.body.classList.contains("light-theme") ? "light" : "dark";
+         localStorage.setItem("theme", currentTheme);
+      });
+
+      /* ==========================================================
+      WAVE UNDERLINE — SCROLL-TRIGGERED DRAW ANIMATION
+      ========================================================== */
+
+      const waveObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+            const svg = entry.target.querySelector('.wave-underline');
+            if (!svg) return;
+
+            if (entry.isIntersecting) {
+               svg.classList.add('drawn');
+            } else {
+               // Reset instantly when scrolled out of view so it plays again on re-entry
+               svg.classList.remove('drawn');
+            }
+         });
+      }, {
+         root: null,
+         rootMargin: "0px 0px -10% 0px", // Trigger when the title comes near viewport bottom
+         threshold: 0.1
+      });
+
+      document.querySelectorAll('.section-title').forEach(title => {
+         if (title.querySelector('.wave-underline')) {
+            waveObserver.observe(title);
+         }
+      });
+
+      /* ==========================================================
+      LOGO GRACEFUL ANIMATION
+      ========================================================== */
+
+      (function () {
+         function initLogoAnim() {
+            const logoEl = document.getElementById('logoText');
+            if (!logoEl || typeof gsap === 'undefined') return;
+
+            const text = 'Ripan.';
+
+            // Wrap each character in its own span; dot gets its own class
+            logoEl.innerHTML = text.split('').map((ch, i) => {
+               const isDot = (i === text.length - 1);
+               const cls = isDot ? 'logo-char logo-dot' : 'logo-char';
+               return `<span class="${cls}" style="display:inline-block;will-change:transform,opacity;">${ch}</span>`;
+            }).join('');
+
+            const allSpans = [...logoEl.querySelectorAll('.logo-char')];
+            const letters = allSpans.slice(0, 5);   // R i p a n
+            const dot = allSpans[5];             // .
+
+            let loopTimer = null;
+
+            function play() {
+               const tl = gsap.timeline({
+                  onComplete: () => {
+                     // Rest for 10 seconds, then replay
+                     loopTimer = setTimeout(play, 10000);
+                  }
+               });
+
+               // ── Reset everything off-screen ──────────────────────────────
+               tl.set(allSpans, { opacity: 0, y: 0, x: 0, scale: 1, rotation: 0 });
+               tl.set(dot, { opacity: 0, y: -22, scale: 0.2 });
+               tl.set(letters, { opacity: 0, y: 14 });
+
+               // ── Step 1: Letters glide in one by one ──────────────────────
+               // Each letter rises up from below and fades in, staggered 110ms
+               letters.forEach((el, i) => {
+                  tl.to(el, {
+                     opacity: 1,
+                     y: 0,
+                     duration: 0.28,
+                     ease: 'power3.out'
+                  }, 0.12 * i);   // absolute position in timeline
+               });
+
+               // ── Step 2: Dot drops & stamps into place ────────────────────
+               // Falls from above with a satisfying elastic snap
+               tl.to(dot, {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  duration: 0.5,
+                  ease: 'back.out(4)'
+               }, 0.12 * 4 + 0.18);   // starts just after last letter peaks
+
+               // ── Step 3: Whole word final glide ───────────────────────────
+               // Subtle rightward nudge, then elastic snap back — "lands" the word
+               tl.to(logoEl, {
+                  x: 7,
+                  duration: 0.16,
+                  ease: 'power2.in'
+               }, '+=0.12')
+                  .to(logoEl, {
+                     x: 0,
+                     duration: 0.65,
+                     ease: 'elastic.out(1, 0.42)'
+                  });
+            }
+
+            // Kick off first play after a short page-load delay
+            setTimeout(play, 500);
+
+            // Hover re-trigger (cancels pending loop, restarts immediately)
+            logoEl.addEventListener('mouseenter', () => {
+               clearTimeout(loopTimer);
+               gsap.killTweensOf([...allSpans, logoEl]);
+               play();
+            });
+         }
+
+         if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initLogoAnim);
+         } else {
+            initLogoAnim();
+         }
+      })();
+   </script>
 </body>
 
 </html>
